@@ -47,7 +47,13 @@ header {
   justify-content: center;
 }
 
-.allPrducts {
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.allProducts {
   margin: 2em 10em;
   padding: 1em;
   background-color: $colorBackground2;
