@@ -1,0 +1,86 @@
+@import "minireset.scss";
+$colorBackground1: #f3e9f1;
+$colorBackground2: white;
+$colorP: black;
+$colorA: #e68a08;
+$colorPrice: #33d9b2;
+$shadow: #84817a;
+$marginTexts: 1em;
+
+
+* {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 5em;
+  font-weight: bolder;
+}
+
+h1, i {
+  margin: .1em;
+}
+
+i, a {
+  color: $colorA;
+}
+
+p {
+  text-align: justify;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+hr {
+  margin: $marginTexts;
+  color: $colorBackground1;
+}
+
+body {
+  background-color: $colorBackground1;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.allPrducts {
+  margin: 2em 10em;
+  padding: 1em;
+  background-color: $colorBackground2;
+  box-shadow: .2em .2em .2em $shadow;
+}
+
+.product {
+  display: flex;
+  justify-content: space-around;
+  h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+}
+
+.picture {
+  max-width: 16%;
+
+}
+
+.price {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: $colorPrice;
+  text-align: center;
+}
+
+.description {
+  h2 {
+    margin-left: $marginTexts;
+    margin-bottom: .5em;
+  }
+  p {
+    margin-left: $marginTexts;
+  }
+}
