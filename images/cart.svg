@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Svg Vector Icons : http://www.onlinewebfonts.com/icon -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 1000 1000"
+   enable-background="new 0 0 1000 1000"
+   xml:space="preserve"
+   id="svg8"
+   sodipodi:docname="cart.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"><defs
+   id="defs12" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1005"
+   id="namedview10"
+   showgrid="false"
+   inkscape:zoom="0.236"
+   inkscape:cx="500"
+   inkscape:cy="500"
+   inkscape:window-x="0"
+   inkscape:window-y="27"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg8" />
+<metadata
+   id="metadata2"> Svg Vector Icons : http://www.onlinewebfonts.com/icon <rdf:RDF><cc:Work
+     rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata>
+<g
+   id="g6"
+   style="fill:#84817a;fill-opacity:0.13333334"><path
+     d="M218.6,673.3c12.2,36.2,50.9,64,89,64h533.1h18.6l5.2-18l122.6-426.6c12.2-42.5-15.8-80.1-59.6-80.1H406.8c-13.7,0-24.8,11.2-24.8,25c0,13.8,11.1,25,24.8,25h520.7c10.8,0,15,5.6,12,16.2L816.9,705.4l23.8-18H307.7c-16.9,0-36.7-14.2-42.1-30.1L58.3,42.3c-4.4-13.1-18.5-20.1-31.5-15.6c-13,4.4-19.9,18.6-15.5,31.7L218.6,673.3z M382,874.8c0-55.2-44.4-99.9-99.2-99.9c-54.8,0-99.2,44.7-99.2,99.9c0,55.2,44.4,99.9,99.2,99.9C337.6,974.7,382,930,382,874.8z M233.2,874.8c0-27.6,22.2-50,49.6-50c27.4,0,49.6,22.4,49.6,50c0,27.6-22.2,50-49.6,50C255.4,924.7,233.2,902.4,233.2,874.8z M902.7,874.8c0-55.2-44.4-99.9-99.2-99.9c-54.8,0-99.2,44.7-99.2,99.9c0,55.2,44.4,99.9,99.2,99.9C858.3,974.7,902.7,930,902.7,874.8z M754,874.8c0-27.6,22.2-50,49.6-50c27.4,0,49.6,22.4,49.6,50c0,27.6-22.2,50-49.6,50C776.2,924.7,754,902.4,754,874.8z"
+     id="path4"
+     style="fill:#84817a;fill-opacity:0.13333334" /></g>
+</svg>

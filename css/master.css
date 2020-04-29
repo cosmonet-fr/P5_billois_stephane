@@ -60,6 +60,17 @@ h1, i {
   margin: .1em;
 }
 
+h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
 i, a {
   color: #e68a08;
 }
@@ -96,11 +107,25 @@ header {
   display: none;
 }
 
-.allProducts {
-  margin: 2em 10em;
+.page {
+  margin: 2em 3em;
+  display: flex;
+}
+
+.allProducts, .cart, .thisProduct {
   padding: 1em;
   background-color: white;
   box-shadow: 0.2em 0.2em 0.2em #84817a;
+}
+
+.cart {
+  width: 100%;
+  min-height: 20em;
+}
+
+.cartBox {
+  width: 40%;
+  margin-left: 2em;
 }
 
 .product {
@@ -113,8 +138,16 @@ header {
   font-weight: bold;
 }
 
+.thisProduct {
+  display: flex;
+}
+
 .picture {
   max-width: 16%;
+}
+
+.thisPicture {
+  max-width: 40%;
 }
 
 .price {
@@ -131,6 +164,39 @@ header {
 
 .description p {
   margin-left: 1em;
+}
+
+.thisDescription {
+  margin-left: 1em;
+}
+
+.thisDescription form {
+  margin-top: 1em;
+}
+
+.thisDescription label {
+  font-weight: bold;
+  color: #e68a08;
+}
+
+.topDesc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footDesc {
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  cursor: pointer;
+  color: white;
+  background-color: #33d9b2;
+  border-radius: .4em;
+  border: none;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=master.css.map */

@@ -21,6 +21,17 @@ h1, i {
   margin: .1em;
 }
 
+h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
 i, a {
   color: $colorA;
 }
@@ -56,11 +67,25 @@ header {
   display: none;
 }
 
-.allProducts {
-  margin: 2em 10em;
+.page {
+  margin: 2em 3em;
+  display: flex;
+}
+
+.allProducts, .cart, .thisProduct {
   padding: 1em;
   background-color: $colorBackground2;
   box-shadow: .2em .2em .2em $shadow;
+}
+
+.cart {
+  width: 100%;
+  min-height: 20em;
+}
+
+.cartBox {
+  width: 40%;
+  margin-left: 2em;
 }
 
 .product {
@@ -72,9 +97,15 @@ header {
   }
 }
 
+.thisProduct {
+  display: flex;
+}
+
 .picture {
   max-width: 16%;
-
+}
+.thisPicture {
+  max-width: 40%;
 }
 
 .price {
@@ -92,4 +123,36 @@ header {
   p {
     margin-left: $marginTexts;
   }
+}
+
+.thisDescription {
+  margin-left: 1em;
+  form {
+    margin-top: 1em;
+  }
+  label {
+    font-weight: bold;
+    color: $colorA;
+  }
+
+}
+
+.topDesc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footDesc {
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  cursor: pointer;
+  color: white;
+  background-color: #33d9b2;
+  border-radius: .4em;
+  border: none;
+  font-size: 1.3em;
+  font-weight: bold;
 }
