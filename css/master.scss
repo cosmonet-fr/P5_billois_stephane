@@ -47,10 +47,13 @@ header {
   justify-content: center;
 }
 
-.loading {
+.open {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+.close {
+  display: none;
 }
 
 .allProducts {
