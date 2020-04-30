@@ -97,6 +97,25 @@ header {
   justify-content: center;
 }
 
+nav .titleNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .titleNav p, nav .titleNav li {
+  margin: 0 1em;
+  padding: 0.4em 1em;
+  background-color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+nav .titleNav ul {
+  list-style: none;
+  display: flex;
+}
+
 .open {
   width: 100%;
   display: flex;
@@ -108,14 +127,22 @@ header {
 }
 
 .page {
-  margin: 2em 3em;
+  margin: 0 3em 2em 3em;
   display: flex;
+}
+
+.block1 {
+  width: 80%;
 }
 
 .allProducts, .cart, .thisProduct {
   padding: 1em;
   background-color: white;
   box-shadow: 0.2em 0.2em 0.2em #84817a;
+}
+
+aside {
+  width: 30%;
 }
 
 .cart {
@@ -125,6 +152,7 @@ header {
 
 .cartBox {
   width: 40%;
+  max-width: 297px;
   margin-left: 2em;
 }
 
@@ -168,6 +196,9 @@ header {
 
 .thisDescription {
   margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .thisDescription form {
