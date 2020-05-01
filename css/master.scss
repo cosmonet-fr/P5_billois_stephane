@@ -96,7 +96,7 @@ nav {
   width: 80%;
 }
 
-.allProducts, .cart, .thisProduct {
+.allProducts, .cart, .thisProduct, .cartPage {
   padding: 1em;
   background-color: $colorBackground2;
   box-shadow: .2em .2em .2em $shadow;
@@ -179,12 +179,21 @@ aside {
   justify-content: space-around;
 }
 
-input {
+input, .btn {
+  display: block;
   cursor: pointer;
   color: white;
-  background-color: #33d9b2;
   border-radius: .4em;
   border: none;
   font-size: 1.3em;
   font-weight: bold;
+}
+
+.add {
+  background-color: #33d9b2;
+
+}
+
+.remove {
+  background-color: #b33939;
 }

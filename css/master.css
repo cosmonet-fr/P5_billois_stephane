@@ -135,7 +135,7 @@ nav .titleNav ul {
   width: 80%;
 }
 
-.allProducts, .cart, .thisProduct {
+.allProducts, .cart, .thisProduct, .cartPage {
   padding: 1em;
   background-color: white;
   box-shadow: 0.2em 0.2em 0.2em #84817a;
@@ -220,14 +220,22 @@ aside {
   justify-content: space-around;
 }
 
-input {
+input, .btn {
+  display: block;
   cursor: pointer;
   color: white;
-  background-color: #33d9b2;
   border-radius: .4em;
   border: none;
   font-size: 1.3em;
   font-weight: bold;
+}
+
+.add {
+  background-color: #33d9b2;
+}
+
+.remove {
+  background-color: #b33939;
 }
 
 /*# sourceMappingURL=master.css.map */

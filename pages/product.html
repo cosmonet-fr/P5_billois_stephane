@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/master.min.css">
     <script src="https://kit.fontawesome.com/aa0ff56e6d.js" crossorigin="anonymous"></script>
-    <title></title>
+    <title>Produit | Oricam</title>
   </head>
   <body>
     <header>
@@ -18,7 +18,7 @@
               <p id="nameTop">##Nom du produit##</p>
               <ul>
                 <li><a href="../index.html">Tous nos articles</a> </li>
-                <li><a href="pages/....html">Mon panier</a> </li>
+                <li><a href="../pages/cart.html">Mon panier</a> </li>
                 <li><a href="mailto:sav@orinoco.com?subject=feedback">Contact SAV</a>  </li>
               </ul>
 
@@ -39,14 +39,12 @@
               <div class="footDesc">
                 <form class="" action="index.html" method="post">
                   <label for="objectif">Choisissez votre objectif :</label><br />
-                  <select class="" name="objectif">
-                    <option value="50">Objectif 50mm F/1,8</option>
-                    <option value="55-200">Objectif 55mm - 200mm F/5,6</option>
-                    <option value="18">Objectif 18mm F/2</option>
+                  <select id="listLenses" class="" name="objectif">
+
                   </select>
                 </form>
 
-                <input type="submit" name="addToCart" value="Ajouter à votre panier">
+                <input class="add" type="submit" name="addToCart" value="Ajouter à votre panier">
 
               </div>
             </div>
