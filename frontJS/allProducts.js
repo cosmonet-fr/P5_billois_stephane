@@ -20,7 +20,7 @@ products.onreadystatechange = function () {
         //newProduct.appendChild = '<div class="product"><div class="picture"> <img src="' + responseProducts[i].imageUrl + '" alt=""><p class="price" >' + responseProducts[i].price + ' €</p></div><div class="description"><h2>' + responseProducts[i].name + '</h2><p>' + responseProducts[i].description + '</p></div></div><hr />'
         let newDivOfProduct = document.createElement("div");                 // Création de la div Produit
         newDivOfProduct.classList.add("product");                            // Ajout de la class="product" à la div
-        newDivOfProduct.innerHTML = ' <div class="picture"> <img src="' + responseProducts[i].imageUrl + '" alt=""><p class="price" >' + responseProducts[i].price + ' €</p></div><div class="description"><h2>' + responseProducts[i].name + '</h2><p>' + responseProducts[i].description + '</p></div>' // Ajout du code HTML pour le produit
+        newDivOfProduct.innerHTML = ' <div class="picture"> <img src="' + responseProducts[i].imageUrl + '" alt=""><p class="price" >' + responseProducts[i].price + ' €</p></div><div class="description"><h2><a href="pages/product.html?id=' + i + '">' + responseProducts[i].name + '</a></h2><p>' + responseProducts[i].description + '</p><!--<a href="pages/product.html?id=' + i + '">Détailles du produit</a>--></div>' // Ajout du code HTML pour le produit
         document.querySelector(".allProducts").appendChild(newDivOfProduct); // Ajout de la div "product" comme enfant de la div "allProducts"
 
 
