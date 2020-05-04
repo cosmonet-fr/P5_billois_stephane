@@ -2,11 +2,14 @@
 $colorBackground1: #f3e9f1;
 $colorBackground2: white;
 $colorP: black;
-$colorA: #e68a08;
+$colorA: #b56f93;
 $colorPrice: #33d9b2;
 $shadow: #84817a;
 $marginTexts: 1em;
 
+@mixin inactiveMenu($colour:$colorBackground2) {
+      color: darken($colour, 10%);
+}
 
 * {
   font-family: sans-serif;
@@ -59,9 +62,8 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1;
-  .titleNav {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
     li {
       margin: 0 1em;
       padding: 0.4em 1em;
@@ -76,11 +78,12 @@ nav {
     }
     a, i {
       color: $colorBackground2;
+      @include inactiveMenu;
       .activ, &:hover {
+        color: $colorBackground2;
         text-shadow: 0 0 1em $colorBackground2;
       }
     }
-  }
 
 }
 

@@ -72,7 +72,7 @@ h3 {
 }
 
 i, a {
-  color: #e68a08;
+  color: #b56f93;
 }
 
 p {
@@ -97,32 +97,31 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1;
-}
-
-nav .titleNav {
   display: flex;
   flex-direction: row;
 }
 
-nav .titleNav li {
+nav li {
   margin: 0 1em;
   padding: 0.4em 1em;
   font-size: 1.2em;
   font-weight: bold;
 }
 
-nav .titleNav ul {
-  background-color: #e68a08;
+nav ul {
+  background-color: #b56f93;
   border-radius: 0 0 0.5em 0;
   list-style: none;
   display: flex;
 }
 
-nav .titleNav a, nav .titleNav i {
+nav a, nav i {
   color: white;
+  color: #e6e6e6;
 }
 
-nav .titleNav a .activ, nav .titleNav a:hover, nav .titleNav i .activ, nav .titleNav i:hover {
+nav a .activ, nav a:hover, nav i .activ, nav i:hover {
+  color: white;
   text-shadow: 0 0 1em white;
 }
 
@@ -231,7 +230,7 @@ aside {
 
 .thisDescription label {
   font-weight: bold;
-  color: #e68a08;
+  color: #b56f93;
 }
 
 .topDesc {
