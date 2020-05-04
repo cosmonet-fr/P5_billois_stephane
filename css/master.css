@@ -92,28 +92,43 @@ body {
   background-color: #f3e9f1;
 }
 
-header {
-  display: flex;
-  justify-content: center;
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 nav .titleNav {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
 }
 
-nav .titleNav p, nav .titleNav li {
+nav .titleNav li {
   margin: 0 1em;
   padding: 0.4em 1em;
-  background-color: white;
   font-size: 1.2em;
   font-weight: bold;
-  border-radius: 0.5em 0.5em 0 0;
 }
 
 nav .titleNav ul {
+  background-color: #e68a08;
+  border-radius: 0 0 0.5em 0;
   list-style: none;
   display: flex;
+}
+
+nav .titleNav a, nav .titleNav i {
+  color: white;
+}
+
+nav .titleNav a .activ, nav .titleNav a:hover, nav .titleNav i .activ, nav .titleNav i:hover {
+  text-shadow: 0 0 1em white;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
 }
 
 .open {
@@ -135,10 +150,34 @@ nav .titleNav ul {
   width: 80%;
 }
 
-.allProducts, .cart, .thisProduct, .cartPage {
-  padding: 1em;
+.allProducts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product, .cart, .thisProduct, .cartPage {
   background-color: white;
   box-shadow: 0.2em 0.2em 0.2em #84817a;
+}
+
+.product {
+  width: 40%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  margin: 1em 0;
+  transition: all .3s;
+}
+
+.product h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.product:hover {
+  transform: scale(1.05);
 }
 
 aside {
@@ -146,6 +185,7 @@ aside {
 }
 
 .cart {
+  padding: 1em;
   width: 100%;
   min-height: 20em;
 }
@@ -156,26 +196,10 @@ aside {
   margin-left: 2em;
 }
 
-.product {
-  display: flex;
-  justify-content: center;
-}
-
-.product h2 {
-  font-size: 1.4em;
-  font-weight: bold;
-}
-
-.thisProduct {
-  display: flex;
-}
-
 .picture {
-  max-width: 16%;
-}
-
-.thisPicture {
-  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .price {
@@ -195,7 +219,7 @@ aside {
 }
 
 .thisDescription {
-  margin-left: 1em;
+  margin: 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -3,7 +3,7 @@ console.log('run product.js');
 let model = urlParam('model'); // Récupération de la valeur en parametre dans l'url [voir urlParam.je]
 document.title = model + ' sur Orinoco'; // changement de la valeur en <title> nomModel </title>
 
-let nameTop = document.getElementById('nameTop');
+//let nameTop = document.getElementById('nameTop');
 let name = document.getElementById('name');
 let price = document.getElementById('price');
 let description = document.getElementById('description');
@@ -27,7 +27,7 @@ fetch('http://localhost:3000/api/cameras')
     .then(json => {
       console.log(json[id].name);
       // Ajout des valeures de l'API sur la page
-      nameTop.innerHTML = json[id].name;
+      //nameTop.innerHTML = json[id].name;
       name.innerHTML = json[id].name;
       price.innerHTML = json[id].price + ' €';
       description.innerHTML = json[id].description;

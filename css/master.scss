@@ -53,29 +53,41 @@ body {
   background-color: $colorBackground1;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-}
 
 nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   .titleNav {
     display: flex;
-    justify-content: space-between;
-    p, li {
+    flex-direction: row;
+    li {
       margin: 0 1em;
       padding: 0.4em 1em;
-      background-color: $colorBackground2;
       font-size: 1.2em;
       font-weight: bold;
-      border-radius: 0.5em 0.5em 0 0;
     }
     ul {
+      background-color: $colorA;
+      border-radius: 0 0 0.5em 0;
       list-style: none;
       display: flex;
     }
+    a, i {
+      color: $colorBackground2;
+      .activ, &:hover {
+        text-shadow: 0 0 1em $colorBackground2;
+      }
+    }
   }
 
+}
+
+.logo {
+  //margin: 8em 0;
+  display: flex;
+  justify-content: center;
 }
 
 .open {
@@ -96,10 +108,33 @@ nav {
   width: 80%;
 }
 
-.allProducts, .cart, .thisProduct, .cartPage {
-  padding: 1em;
+.allProducts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.product, .cart, .thisProduct, .cartPage {
   background-color: $colorBackground2;
   box-shadow: .2em .2em .2em $shadow;
+}
+
+.product {
+  width: 40%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  margin: 1em 0;
+  transition: all .3s;
+  h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 aside {
@@ -107,6 +142,7 @@ aside {
 }
 
 .cart {
+  padding: 1em;
   width: 100%;
   min-height: 20em;
 }
@@ -117,24 +153,19 @@ aside {
   margin-left: 2em;
 }
 
-.product {
-  display: flex;
-  justify-content: center;
-  h2 {
-    font-size: 1.4em;
-    font-weight: bold;
-  }
-}
 
 .thisProduct {
-  display: flex;
+  //display: flex;
+}
+
+.thisPicture {
+  //max-width: 40%;
 }
 
 .picture {
-  max-width: 16%;
-}
-.thisPicture {
-  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .price {
@@ -155,7 +186,7 @@ aside {
 }
 
 .thisDescription {
-  margin-left: 1em;
+  margin: 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
