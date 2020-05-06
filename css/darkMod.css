@@ -3,7 +3,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #173850, black);
+  background: linear-gradient(to bottom, black, #173850, black);
 }
 
 i, a {
@@ -18,7 +18,11 @@ i, a {
 nav ul {
   background-color: #222f3e;
   border-bottom: solid 1px #6cf;
-  border-right: solid 1px #6cf;
+}
+
+nav .confMenu .on {
+  color: #e6e6e6;
+  text-shadow: none;
 }
 
 /*# sourceMappingURL=darkMod.css.map */

@@ -99,6 +99,7 @@ nav {
   z-index: 1;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 nav li {
@@ -110,7 +111,6 @@ nav li {
 
 nav ul {
   background-color: #b56f93;
-  border-radius: 0 0 0.5em 0;
   list-style: none;
   display: flex;
 }
@@ -123,6 +123,23 @@ nav a, nav i {
 nav a .activ, nav a:hover, nav i .activ, nav i:hover {
   color: white;
   text-shadow: 0 0 1em white;
+}
+
+nav .mainMenu ul {
+  border-radius: 0 0 0.5em 0;
+}
+
+.confMenu ul {
+  border-radius: 0 0 0 0.5em;
+}
+
+.confMenu ul .fa-lightbulb {
+  cursor: pointer;
+}
+
+.confMenu ul .on {
+  color: #feca57;
+  text-shadow: 0 0 1em #feca57;
 }
 
 .logo {

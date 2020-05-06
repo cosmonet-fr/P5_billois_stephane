@@ -8,15 +8,28 @@
   </head>
   <body>
     <nav>
-      <div class="titleNav">
 
+      <div class="mainMenu">
         <ul>
-          <li> <a href="../index.html"><i class="fas fa-store fa-2x"></i></a> </li>
-          <li><a href="cart.html"><i class="fas fa-shopping-cart fa-2x"></i></a> </li>
+          <li> <a href="../index.html"><i class="fas fa-store fa-2x activ"></i></a> </li>
+          <li><a href="../pages/cart.html"><i class="fas fa-shopping-cart fa-2x"></i></a> </li>
           <li><a href="mailto:sav@orinoco.com?subject=feedback"><i class="fas fa-envelope fa-2x"></i></a>  </li>
         </ul>
-
       </div>
+
+      <div class="confMenu">
+        <ul>
+          <li><i class="fas fa-lightbulb fa-2x on" onclick="if (localStorage.getItem('darkMod') === 'true') {
+            localStorage.setItem('darkMod', 'false');
+          } else {
+            localStorage.setItem('darkMod', 'true');
+          }
+          document.location.reload(true);" ></i></li>
+        </ul>
+      </div>
+
+
+
     </nav>
     <header>
       <div class="logo">
