@@ -1,0 +1,29 @@
+$colorBackground2: #222f3e;
+$colorA: #6cf;
+$shadow: black;
+
+
+* {
+  color: white;
+}
+body {
+  background: linear-gradient(to bottom, #173850, black);
+}
+
+i, a {
+  color: $colorA;
+}
+
+
+.product, .cart, .thisProduct, .cartPage {
+  background-color: $colorBackground2;
+  box-shadow: .2em .2em .2em $shadow;
+}
+nav {
+  ul {
+    background-color: $colorBackground2;
+    border-bottom: solid 1px $colorA;
+    border-right: solid 1px $colorA;
+
+  }
+}
