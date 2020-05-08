@@ -24,22 +24,22 @@ if (window.fetch) {
 
 fetch('http://localhost:3000/api/cameras')
   .then(response => response.json())
-    .then(json => {
-      console.log(json[id].name);
+    .then(apiData => {
+      console.log(apiData[id].name);
       // Ajout des valeures de l'API sur la page
-      //nameTop.innerHTML = json[id].name;
-      name.innerHTML = json[id].name;
-      price.innerHTML = json[id].price + ' €';
-      description.innerHTML = json[id].description;
-      img.setAttribute("src", json[id].imageUrl);
+      //nameTop.innerHTML = apiData[id].name;
+      name.innerHTML = apiData[id].name;
+      price.innerHTML = apiData[id].price + ' €';
+      description.innerHTML = apiData[id].description;
+      img.setAttribute("src", apiData[id].imageUrl);
 
       // Création d'une boucle pour ajouter tous les objectifs sur la liste du menu déroulant
-      for (var i = 0; i < json[id].lenses.length; i++) {
-        console.log(json[id].lenses[i]);
+      for (let i = 0; i < apiData[id].lenses.length; i++) {
+        console.log(apiData[id].lenses[i]);
         let newLenses = document.createElement('option');
         console.log(newLenses);
-        newLenses.innerText = 'Objectif ' + json[id].lenses[i];
-        newLenses.setAttribute('value', json[id].lenses[i]);
+        newLenses.innerText = 'Objectif ' + apiData[id].lenses[i];
+        newLenses.setAttribute('value', apiData[id].lenses[i]);
         console.log(document.querySelector('#listLenses'));
         document.querySelector('#listLenses').appendChild(newLenses);
 

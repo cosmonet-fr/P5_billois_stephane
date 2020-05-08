@@ -14,7 +14,7 @@ products.onreadystatechange = function () {
       console.log(loadingImg);                      // Vérifier
 
 
-      for (var i = 0; i < responseProducts.length; i++) {
+      for (let i = 0; i < responseProducts.length; i++) {
         //responseProducts[i]
         console.log(responseProducts[i].name);
         let newDivOfProduct = document.createElement("div");                 // Création de la div Produit
