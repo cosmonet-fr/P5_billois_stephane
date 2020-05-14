@@ -6,8 +6,8 @@ let name = urlParam('name');
 let price = urlParam('price');
 
 
-const curentProducts = JSON.parse(localStorage.getItem('cart.products'));
-console.log(curentProducts);
+//let curentProducts = JSON.parse(localStorage.getItem('cart'));
+//console.log(curentProducts);
 
 let cart = {createdAt: new Date(), products : []};
 
@@ -15,12 +15,13 @@ if (id != 'null' && _id != 'null' && name != 'null' && price != 'null') {
   console.log('Yo !!!');
   //Ajout des produit actuels dans l'objet JS
   let oldCart = JSON.parse(localStorage.getItem('cart'));
-  for (let i = 0; i <= localStorage.length; i++) {
+  for (let i = 0; i <= cart.products.length; i++) {
+    console.log('BOUCLE !!!!');
     cart.products.push({
       id: oldCart.products[i].id,
       _id: oldCart.products[i]._id,
       name: oldCart.products[i].name,
-      price: oldCart.products[i].price
+      price: oldCart.products[i].price    // Problème avec cette BOUCLE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   });
   }
 
@@ -31,19 +32,15 @@ if (id != 'null' && _id != 'null' && name != 'null' && price != 'null') {
     price: price
 });
 
+cart.products.push({
+  id: 44,
+  _id: 44,
+  name: 44,
+  price: 44
+});
+
 
 localStorage.setItem('cart', JSON.stringify(cart));
-
-//console.log('Dans l\'autre sens !!!!!');
-
-
-//console.log(localStorage.getItem('cart'));
-
-//const fin = JSON.parse(localStorage.getItem('cart'));
-
-//console.log('fin = ' + fin.products[1].name);
-
-
 
 } else {
   console.error('NO !!!');
