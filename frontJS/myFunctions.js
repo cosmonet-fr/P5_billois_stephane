@@ -44,10 +44,4 @@ const removeProductOfCart = (idProduct) => {
 
 
 
-      })
-
-
-
-
-
-}
+      }

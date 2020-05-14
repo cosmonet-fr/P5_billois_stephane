@@ -16,6 +16,8 @@ fetch('http://localhost:3000/api/cameras')
             eltCart.classList.add("eltCart");                            // Ajout de la class="eltCart" à la div
             eltCart.setAttribute('id', apiData[localStorage.key(indexCart)]._id);                            // Ajout de la class="pour identifier le produit" à la div
             let id = "'" + apiData[localStorage.key(indexCart)]._id + "'";
+            var removeKey  = localStorage.key(indexCart);
+            
             eltCart.innerHTML = '<div id"nameCart" class="nameCart"><h2 class="nameOnCart" >' + apiData[localStorage.key(indexCart)].name +'</h2></div><div class="infosCart"><p id="priceOnCart" class="price" >' + apiData[localStorage.key(indexCart)].price + ' € </p> <i class="far fa-trash-alt fa-2x" onclick="removeProductOfCart(' + id + ');"></i></div>'
             document.querySelector(".myCart").appendChild(eltCart);
 
