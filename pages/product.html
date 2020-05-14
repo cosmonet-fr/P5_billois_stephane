@@ -12,7 +12,7 @@
       <div class="mainMenu">
         <ul>
           <li> <a href="../index.html"><i class="fas fa-store fa-2x activ"></i></a> </li>
-          <li><a href="../pages/cart.html"><i class="fas fa-shopping-cart fa-2x"></i></a> </li>
+          <li><a href="../pages/cart.html?id=null&_id=null&name=null&price=null"><i class="fas fa-shopping-cart fa-2x"></i></a> </li>
           <li><a href="mailto:sav@orinoco.com?subject=feedback"><i class="fas fa-envelope fa-2x"></i></a>  </li>
         </ul>
       </div>
@@ -60,7 +60,8 @@
                   </select>
                 </form>
 
-                <input class="add" type="submit" name="addToCart" value="Ajouter à votre panier">
+
+                <a id="addToCart" href="">Ajouter au panier</a>
 
               </div>
             </div>
@@ -87,9 +88,7 @@
       </div>
     </section>
     <script src="../frontJS/darkMod.js" charset="utf-8"></script>
-    <script src="../frontJS/urlParam.js" charset="utf-8"></script>
+    <script src="../frontJS/myFunctions.js" charset="utf-8"></script>
     <script src="../frontJS/product.js" charset="utf-8"></script>
-    <script src="../frontJS/addToCart.js" charset="utf-8"></script>
-    <script src="../frontJS/readCart.js" charset="utf-8"></script>
   </body>
 </html>

@@ -140,7 +140,7 @@ nav {
 
 }
 
-.product, .cart, .thisProduct, .cartPage {
+.product, .cart, .thisProduct, .eltCart {
   background-color: $colorBackground2;
   box-shadow: .2em .2em .2em $shadow;
 }
@@ -252,4 +252,33 @@ input, .btn {
 
 .remove {
   background-color: #b33939;
+}
+
+.eltCart, .infosCart {
+  display: flex;
+  i {
+    margin: .15em .4em;
+    cursor: pointer;
+
+  }
+}
+
+.eltCart{
+  width: 100%;
+  justify-content: space-between;
+  .price {
+    font-size: 2.2em;
+  }
+
+}
+.myCart {
+  width: 100%;
+}
+
+.nameCart {
+  max-width: 80%;
+}
+
+.eltCart, .nameCart {
+  padding: 0.4em;
 }

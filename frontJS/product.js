@@ -9,6 +9,7 @@ let price = document.getElementById('price');
 let description = document.getElementById('description');
 let img = document.getElementById('img');
 let listLenses = document.getElementById('listLenses')
+let addToCart = document.getElementById('addToCart')
 
 
 // Récupérer les parametres de l'url
@@ -26,12 +27,15 @@ fetch('http://localhost:3000/api/cameras')
   .then(response => response.json())
     .then(apiData => {
       console.log(apiData[id].name);
+
       // Ajout des valeures de l'API sur la page
-      //nameTop.innerHTML = apiData[id].name;
+
       name.innerHTML = apiData[id].name;
       price.innerHTML = apiData[id].price + ' €';
       description.innerHTML = apiData[id].description;
-      img.setAttribute("src", apiData[id].imageUrl);
+      img.setAttribute('src', apiData[id].imageUrl);
+
+      addToCart.setAttribute('href', 'cart.html?id=' + id + '&_id=' + apiData[id]._id + '&name=' + apiData[id].name + '&price=' + apiData[id].price ) // Ajout du href sur le bouton "ajouter au panier"
 
       // Création d'une boucle pour ajouter tous les objectifs sur la liste du menu déroulant
       for (let i = 0; i < apiData[id].lenses.length; i++) {
@@ -42,6 +46,7 @@ fetch('http://localhost:3000/api/cameras')
         newLenses.setAttribute('value', apiData[id].lenses[i]);
         console.log(document.querySelector('#listLenses'));
         document.querySelector('#listLenses').appendChild(newLenses);
+
 
       }
 
