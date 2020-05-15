@@ -6,23 +6,34 @@ let name = urlParam('name');
 let price = urlParam('price');
 
 
-//let curentProducts = JSON.parse(localStorage.getItem('cart'));
-//console.log(curentProducts);
+let oldCart = JSON.parse(localStorage.getItem('cart'));
+console.log(oldCart);
 
 let cart = {createdAt: new Date(), products : []};
 
 if (id != 'null' && _id != 'null' && name != 'null' && price != 'null') {
   console.log('Yo !!!');
-  //Ajout des produit actuels dans l'objet JS
-  let oldCart = JSON.parse(localStorage.getItem('cart'));
-  for (let i = 0; i <= cart.products.length; i++) {
-    console.log('BOUCLE !!!!');
-    cart.products.push({
-      id: oldCart.products[i].id,
-      _id: oldCart.products[i]._id,
-      name: oldCart.products[i].name,
-      price: oldCart.products[i].price    // Problème avec cette BOUCLE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  });
+
+  //Vérifier si il y a quelque chose dans le panier
+  if (oldCart !== null) {
+    let nbOldProducts = oldCart.products.length;
+    console.log('COMPTEUR : ' + nbOldProducts );
+    //Si il n'est pas vide, Ajout des produit actuels dans l'objet JS
+    for (let i = 0; i < nbOldProducts; i++) {
+      console.log('BOUCLE !!!!');
+      console.log(i);
+      console.log(oldCart.products[i].id);
+      console.log(oldCart.products[i]._id);
+      console.log(oldCart.products[i].name);
+      console.log(oldCart.products[i].price);
+      cart.products.push({
+        id: oldCart.products[i].id,
+        _id: oldCart.products[i]._id,
+        name: oldCart.products[i].name,
+        price: oldCart.products[i].price
+      });
+    }
+
   }
 
   cart.products.push({
@@ -31,14 +42,6 @@ if (id != 'null' && _id != 'null' && name != 'null' && price != 'null') {
     name: name,
     price: price
 });
-
-cart.products.push({
-  id: 44,
-  _id: 44,
-  name: 44,
-  price: 44
-});
-
 
 localStorage.setItem('cart', JSON.stringify(cart));
 
