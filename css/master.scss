@@ -169,7 +169,13 @@ aside {
 .cart {
   padding: 1em;
   width: 100%;
-  min-height: 20em;
+  //min-height: 20em;
+}
+.row {
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .cartBox {

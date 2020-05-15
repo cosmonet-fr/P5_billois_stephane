@@ -2,6 +2,10 @@
   color: white;
 }
 
+h2 {
+  color: black;
+}
+
 body {
   background: linear-gradient(to bottom, black, #173850, black);
 }
