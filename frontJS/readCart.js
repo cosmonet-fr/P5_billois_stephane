@@ -7,7 +7,7 @@ console.log(myCart);
 for (let i = 0; i < myProducts.products.length; i++) {
   let eltCart = document.createElement("div");                            // Création de la div eltCart
   eltCart.classList.add("eltCart");                                       // Ajout de la class="eltCart" à la div
-  eltCart.innerHTML = '<h2 class="nameOnCart" >' + myProducts.products[i].name + '</h2>  <p class="price" >' + myProducts.products[i].price + ' € <i class="far fa-trash-alt"></i></p>';
+  eltCart.innerHTML = '<h2 class="nameOnCart" ><a href="product.html?id=' + myProducts.products[i].id + '&model=' + myProducts.products[i].name + '">' + myProducts.products[i].name + '</a></h2>  <p class="price" >' + myProducts.products[i].price + ' € <i class="far fa-trash-alt"></i></p>';
   document.querySelector(".myCart").appendChild(eltCart);
 
 }
@@ -18,7 +18,7 @@ for (let i = 0; i < myProducts.products.length; i++) {
   sumCart = sumCart + unitPrice;
 }
 console.log(sumCart);
-let totalCart = document.createElement("div"); 
+let totalCart = document.createElement("div");
 totalCart.classList.add("totalCart");
 totalCart.innerHTML = '<h2>Total :</h2><p class="price">' + sumCart + ' €</p>';
 document.querySelector(".myCart").appendChild(totalCart);
