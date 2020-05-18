@@ -317,4 +317,13 @@ input, .btn {
   padding: 0.4em;
 }
 
+.cart {
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.cart:hover {
+  transform: scale(1.05);
+}
+
 /*# sourceMappingURL=master.css.map */

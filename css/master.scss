@@ -294,3 +294,10 @@ input, .btn {
 .eltCart, .nameCart {
   padding: 0.4em;
 }
+.cart {
+  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
