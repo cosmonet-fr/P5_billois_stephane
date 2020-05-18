@@ -140,7 +140,7 @@ nav {
 
 }
 
-.product, .cart, .thisProduct, .eltCart {
+.product, .cart, .thisProduct, .eltCart, .totalCart {
   background-color: $colorBackground2;
   box-shadow: .2em .2em .2em $shadow;
 }
@@ -260,7 +260,7 @@ input, .btn {
   background-color: #b33939;
 }
 
-.eltCart, .infosCart {
+.eltCart, .totalCart, .infosCart {
   display: flex;
   i {
     margin: .15em .4em;
@@ -269,7 +269,7 @@ input, .btn {
   }
 }
 
-.eltCart{
+.eltCart, .totalCart{
   width: 100%;
   justify-content: space-between;
   .price {
@@ -277,6 +277,12 @@ input, .btn {
   }
 
 }
+
+.totalCart {
+  margin-top: 1em;
+  padding: 1.5em;
+}
+
 .myCart {
   width: 100%;
 }

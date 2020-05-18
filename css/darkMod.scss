@@ -6,9 +6,7 @@ $shadow: black;
 * {
   color: white;
 }
-h2 {
-  color: black;
-}
+
 body {
   background: linear-gradient(to bottom, black, #173850, black);
 }
@@ -18,7 +16,7 @@ i, a {
 }
 
 
-.product, .cart, .thisProduct, .cartPage {
+.product, .cart, .thisProduct, .cartPage, .eltCart, .totalCart {
   background-color: $colorBackground2;
   box-shadow: .2em .2em .2em $shadow;
 }

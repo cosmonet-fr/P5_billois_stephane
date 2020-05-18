@@ -172,7 +172,7 @@ nav .mainMenu ul {
   justify-content: space-around;
 }
 
-.product, .cart, .thisProduct, .eltCart {
+.product, .cart, .thisProduct, .eltCart, .totalCart {
   background-color: white;
   box-shadow: 0.2em 0.2em 0.2em #84817a;
 }
@@ -282,22 +282,27 @@ input, .btn {
   background-color: #b33939;
 }
 
-.eltCart, .infosCart {
+.eltCart, .totalCart, .infosCart {
   display: flex;
 }
 
-.eltCart i, .infosCart i {
+.eltCart i, .totalCart i, .infosCart i {
   margin: .15em .4em;
   cursor: pointer;
 }
 
-.eltCart {
+.eltCart, .totalCart {
   width: 100%;
   justify-content: space-between;
 }
 
-.eltCart .price {
+.eltCart .price, .totalCart .price {
   font-size: 2.2em;
+}
+
+.totalCart {
+  margin-top: 1em;
+  padding: 1.5em;
 }
 
 .myCart {

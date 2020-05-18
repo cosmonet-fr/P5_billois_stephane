@@ -2,10 +2,6 @@
   color: white;
 }
 
-h2 {
-  color: black;
-}
-
 body {
   background: linear-gradient(to bottom, black, #173850, black);
 }
@@ -14,7 +10,7 @@ i, a {
   color: #6cf;
 }
 
-.product, .cart, .thisProduct, .cartPage {
+.product, .cart, .thisProduct, .cartPage, .eltCart, .totalCart {
   background-color: #222f3e;
   box-shadow: 0.2em 0.2em 0.2em black;
 }
