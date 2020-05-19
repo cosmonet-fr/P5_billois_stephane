@@ -264,7 +264,7 @@ aside {
   justify-content: space-around;
 }
 
-input, .btn {
+.btn {
   display: block;
   cursor: pointer;
   color: white;
@@ -324,6 +324,17 @@ input, .btn {
 
 .cart:hover {
   transform: scale(1.05);
+}
+
+input {
+  font-size: 1.5em;
+  color: black;
+  margin: .5em;
+  padding: .5em;
+}
+
+label {
+  font-size: 1.5em;
 }
 
 /*# sourceMappingURL=master.css.map */

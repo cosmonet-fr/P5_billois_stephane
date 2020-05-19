@@ -34,7 +34,7 @@ const urlParam = (myParam) => {
 
 
 // Supprimer un article du Panier
-const removeProductOfCart = (idProduct) => {
+const removeProductOfCart = (idProduct, pos) => {
   let cart = document.getElementById('myCart');
   console.log(cart);
   let removeProduct = document.getElementById(idProduct);
@@ -42,6 +42,7 @@ const removeProductOfCart = (idProduct) => {
   cart.removeChild(removeProduct);    // Supprime l'élément removeProduct de l'élément cart
 
 
+  // Supprimer l'élément dans localStorage
 
-
+  
       }
