@@ -10,7 +10,11 @@ i, a {
   color: #6cf;
 }
 
-.product, .cart, .thisProduct, .cartPage, .eltCart, .totalCart {
+.price {
+  color: #e74c3c;
+}
+
+.product, .cart, .thisProduct, .cartPage, .eltCart, .totalCart, .form {
   background-color: #222f3e;
   box-shadow: 0.2em 0.2em 0.2em black;
 }

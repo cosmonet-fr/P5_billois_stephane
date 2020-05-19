@@ -8,7 +8,7 @@ for (let i = 0; i < myProducts.products.length; i++) {
   let eltCart = document.createElement("div");                            // Création de la div eltCart
   eltCart.classList.add("eltCart");                                       // Ajout de la class="eltCart" à la div
   eltCart.setAttribute("id", myProducts.products[i]._id);                 // Ajout de l'id pour la fermeture de la div au clique sur la poubelle
-  eltCart.innerHTML = '<h2 class="nameOnCart" ><a href="product.html?id=' + myProducts.products[i].id + '&model=' + myProducts.products[i].name + '">' + myProducts.products[i].name + '</a></h2>  <p class="price" >' + myProducts.products[i].price + ' € <i class="far fa-trash-alt" onclick="removeProductOfCart(' + '\'' + myProducts.products[i]._id + '\', ' + '\'' + i + '\'' + ')"></i></p>';
+  eltCart.innerHTML = '<h3 class="nameOnCart" ><a href="product.html?id=' + myProducts.products[i].id + '&model=' + myProducts.products[i].name + '">' + myProducts.products[i].name + '</a></h3>  <p class="price" >' + myProducts.products[i].price + ' € <i class="far fa-trash-alt" onclick="removeProductOfCart(' + '\'' + myProducts.products[i]._id + '\', ' + '\'' + i + '\'' + ')"></i></p>';
   document.querySelector(".myCart").appendChild(eltCart);
 
 }

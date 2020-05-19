@@ -15,8 +15,11 @@ i, a {
   color: $colorA;
 }
 
+.price {
+  color: #e74c3c;
+}
 
-.product, .cart, .thisProduct, .cartPage, .eltCart, .totalCart {
+.product, .cart, .thisProduct, .cartPage, .eltCart, .totalCart, .form {
   background-color: $colorBackground2;
   box-shadow: .2em .2em .2em $shadow;
 }

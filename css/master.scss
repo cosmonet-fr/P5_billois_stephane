@@ -1,9 +1,10 @@
 @import "minireset.scss";
-$colorBackground1: #f3e9f1;
+$colorBackground1-a: #a5b1c2;
+$colorBackground1-b: #f1f2f6;
 $colorBackground2: white;
 $colorP: black;
-$colorA: #b56f93;
-$colorPrice: #33d9b2;
+$colorA: #015568;
+$colorPrice: $colorA;
 $shadow: #84817a;
 $marginTexts: 1em;
 
@@ -24,7 +25,7 @@ h1, i {
   margin: .1em;
 }
 
-h2 {
+h2, .myCart h3 {
   font-size: 2.2em;
   font-weight: bold;
 }
@@ -49,11 +50,12 @@ a:hover{
 
 hr {
   margin: $marginTexts;
-  color: $colorBackground1;
+  color: $colorBackground1-a;
 }
 
 body {
-  background-color: $colorBackground1;
+  //background-color: $colorBackground1;
+  background: linear-gradient(to bottom, $colorBackground1-a, $colorBackground1-b, $colorBackground1-a);
 }
 
 
@@ -140,7 +142,7 @@ nav {
 
 }
 
-.product, .cart, .thisProduct, .eltCart, .totalCart {
+.product, .cart, .thisProduct, .eltCart, .totalCart, .form {
   background-color: $colorBackground2;
   box-shadow: .2em .2em .2em $shadow;
 }
@@ -301,7 +303,18 @@ aside {
     transform: scale(1.05);
   }
 }
-
+.h2Cart {
+  margin: .2em 1.5em;
+}
+.form {
+  margin: 0 1em;
+  padding: 1.5em;
+}
+.eltForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 input {
   font-size: 1.5em;
   color: black;

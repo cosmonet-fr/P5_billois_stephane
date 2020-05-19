@@ -11,8 +11,8 @@
 
       <div class="mainMenu">
         <ul>
-          <li> <a href="../index.html"><i class="fas fa-store fa-2x activ"></i></a> </li>
-          <li><a href="../pages/cart.html?id=null&_id=null&name=null&price=null"><i class="fas fa-shopping-cart fa-2x"></i></a> </li>
+          <li> <a href="../index.html"><i class="fas fa-store fa-2x"></i></a> </li>
+          <li><a href="../pages/cart.html?id=null&_id=null&name=null&price=null"><i class="fas fa-shopping-cart fa-2x activ"></i></a> </li>
           <li><a href="mailto:sav@orinoco.com?subject=feedback"><i class="fas fa-envelope fa-2x"></i></a>  </li>
         </ul>
       </div>
@@ -38,6 +38,8 @@
       </div>
     </header>
     <section>
+
+      <h2 class="h2Cart" >Votre panier :</h2>
       <div class="page">
         <div id="myCart" class="myCart">
 
@@ -46,30 +48,36 @@
 
 
 
+        <div class="form">
+          <h2>Votre commande :</h2>
+          <form class="" action="index.html" method="post">
+            <div class="eltForm">
+              <p>
+                <p> <label for="firstName">Votre prénom : </label> </p> <input type="text" name="firstName" id="firstName" maxlength="35" placeholder="Ex : Aurore" required>
+              </p>
+            </div>
+              <p>
+                <p> <label for="lastName">Votre nom : </label> </p> <input type="text" name="lastName" id="lastName" maxlength="35" placeholder="Ex : Dupont" required>
+              </p>
+              <p>
+                <p> <label for="address">Votre adresse : </label> </p> <input type="text" name="address" id="address" placeholder="Ex : 3 Rue de la Liberté" required>
+              </p>
+              <p>
+                <p> <label for="city">Votre ville : </label> </p> <input type="text" name="city" id="city" maxlength="35" placeholder="Ex : Aurillac" required>
+              </p>
+              <p>
+                <p> <label for="email">Votre e-mail : </label> </p> <input type="email" name="email" id="email" maxlength="35" placeholder="Ex : aurore@aureos.fr" required>
+              </p>
+              <p>
+                <input type="submit" value="Envoyer" />
+              </p>
+
+          </form>
+
+        </div>
       </div>
     </section>
-    <section>
-      <form class="" action="index.html" method="post">
-        <p>
-          <label for="firstName">Votre prénom : </label> <input type="text" name="firstName" id="firstName" maxlength="35" placeholder="Ex : Aurore" required>
-        </p>
-        <p>
-          <label for="lastName">Votre nom : </label> <input type="text" name="lastName" id="lastName" maxlength="35" placeholder="Ex : Dupont" required>
-        </p>
-        <p>
-          <label for="address">Votre adresse : </label> <input type="text" name="address" id="address" placeholder="Ex : 3 Rue de la Liberté" required>
-        </p>
-        <p>
-          <label for="city">Votre ville : </label> <input type="text" name="city" id="city" maxlength="35" placeholder="Ex : Aurillac" required>
-        </p>
-        <p>
-          <label for="email">Votre e-mail : </label> <input type="email" name="email" id="email" maxlength="35" placeholder="Ex : aurore@aureos.fr" required>
-        </p>
-        <p>
-          <input type="submit" value="Envoyer" />
-        </p>
-      </form>
-    </section>
+
 
 
     <script src="../frontJS/darkMod.js" charset="utf-8"></script>
