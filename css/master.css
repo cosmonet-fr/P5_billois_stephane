@@ -72,7 +72,7 @@ h3 {
 }
 
 i, a {
-  color: #015568;
+  color: #2980b9;
 }
 
 p {
@@ -85,11 +85,11 @@ a:hover {
 
 hr {
   margin: 1em;
-  color: #a5b1c2;
+  color: #eee;
 }
 
 body {
-  background: linear-gradient(to bottom, #a5b1c2, #f1f2f6, #a5b1c2);
+  background: linear-gradient(to top, #f1f2f6, #eee);
 }
 
 nav {
@@ -110,7 +110,7 @@ nav li {
 }
 
 nav ul {
-  background-color: #015568;
+  background-color: #2980b9;
   list-style: none;
   display: flex;
 }
@@ -225,7 +225,7 @@ aside {
 .price {
   font-size: 1.5em;
   font-weight: bold;
-  color: #015568;
+  color: #2980b9;
   text-align: center;
 }
 
@@ -251,7 +251,7 @@ aside {
 
 .thisDescription label {
   font-weight: bold;
-  color: #015568;
+  color: #2980b9;
 }
 
 .topDesc {

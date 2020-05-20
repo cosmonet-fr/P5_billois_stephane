@@ -1,9 +1,9 @@
 @import "minireset.scss";
-$colorBackground1-a: #a5b1c2;
+$colorBackground1-a: #eee;
 $colorBackground1-b: #f1f2f6;
 $colorBackground2: white;
 $colorP: black;
-$colorA: #015568;
+$colorA: #2980b9;
 $colorPrice: $colorA;
 $shadow: #84817a;
 $marginTexts: 1em;
@@ -55,7 +55,7 @@ hr {
 
 body {
   //background-color: $colorBackground1;
-  background: linear-gradient(to bottom, $colorBackground1-a, $colorBackground1-b, $colorBackground1-a);
+  background: linear-gradient(to top, $colorBackground1-b, $colorBackground1-a);
 }
 
 
