@@ -5,9 +5,11 @@ let _id = urlParam('_id');
 let name = urlParam('name');
 let price = urlParam('price');
 
-let ifExist = false;
+//let ifExist = false;
 let cart = JSON.parse(localStorage.getItem('cart'));
-console.log(cart);
+console.log('La variable "carte" contient: ' + cart);
+if (id != null && _id != null && name != null && price != null) {
+  console.log('Il y a un objet qui est dans les parametres de l\'url');
 
 if (cart === null) {
   cart = {createdAt: new Date(), products : [
@@ -23,8 +25,6 @@ if (cart === null) {
 
 }
 
-if (id != 'null' && _id != 'null' && name != 'null' && price != 'null') {
-  console.log('Yo !!!');
 
   //Vérifier si il y a quelque chose dans le panier
 
@@ -50,6 +50,6 @@ for (let i in cart.products) {
 localStorage.setItem('cart', JSON.stringify(cart));
 
 } else {
-  console.error('NO !!!');
+  console.error('Il n\'y a pas d\'objet dans les parametres de l\'url');
 
 }
