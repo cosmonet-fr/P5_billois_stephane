@@ -26,6 +26,7 @@ console.log('run myFunctions.js');
 
 
 
+
 // La fonction pour récupérer les parametres dans l'url (= "$_GET" en php)
 const urlParam = (myParam) => {
   let allParamsOfUrl = new URLSearchParams(window.location.search);
@@ -34,7 +35,7 @@ const urlParam = (myParam) => {
 
 
 // Supprimer un article du Panier
-const removeProductOfCart = (idProduct, pos) => {
+const removeProductOfCart = (idProduct) => {
   let cart = document.getElementById('myCart');
   console.log(cart);
   let removeProduct = document.getElementById(idProduct);
@@ -43,6 +44,22 @@ const removeProductOfCart = (idProduct, pos) => {
 
 
   // Supprimer l'élément dans localStorage
+  let cartLocalStorage = JSON.parse(localStorage.getItem('cart'));
+  for (var i = 0; i < cartLocalStorage.products.length; i++) {
+    //let toDelete = false;
+    if (cartLocalStorage.products[i]._id === idProduct) {
+      cartLocalStorage.products.splice(i, 1);
+      localStorage.setItem('cart', JSON.stringify(cartLocalStorage));
 
-  
+      // Recalculer le total du panier (A REFAIRE DANS UNE FONCTION)
+
+
+
+    } else {
+      console.error('NADA !!!');
+    }
+
+  }
+
+
       }
