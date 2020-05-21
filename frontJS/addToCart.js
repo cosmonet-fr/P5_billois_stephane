@@ -57,11 +57,9 @@ localStorage.setItem('cart', JSON.stringify(cart));
   if (cart === null) {
     console.error('Il n\'y a pas d\'objet dans les parametres de l\'url');
 
-    let myCart = document.getElementById('myCart');
-    let eltCart = document.createElement("div");                            // Création de la div eltCart
-    eltCart.classList.add("eltCart");                                       // Ajout de la class="eltCart" à la div
-    eltCart.innerHTML = '<h3 class="nameOnCart" > Votre panier est vide !</h3>';
-    document.querySelector(".myCart").appendChild(eltCart);
+
+    emptyCart();
+
 
   }
 

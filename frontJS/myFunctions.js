@@ -33,6 +33,14 @@ const urlParam = (myParam) => {
   return allParamsOfUrl.get(myParam);
 }
 
+// Afficher "panier vide" sur la page cart.html
+const emptyCart = () => {
+  let myCart = document.getElementById('myCart');
+  let eltCart = document.createElement("div");                            // Création de la div eltCart
+  eltCart.classList.add("eltCart");                                       // Ajout de la class="eltCart" à la div
+  eltCart.innerHTML = '<h3 class="nameOnCart" > Votre panier est vide !</h3>';
+  document.querySelector(".myCart").appendChild(eltCart);
+}
 
 // Supprimer un article du Panier
 const removeProductOfCart = (idProduct) => {
@@ -48,10 +56,24 @@ const removeProductOfCart = (idProduct) => {
   for (var i = 0; i < cartLocalStorage.products.length; i++) {
     //let toDelete = false;
     if (cartLocalStorage.products[i]._id === idProduct) {
+      var thisPrice = cartLocalStorage.products[i].price;
       cartLocalStorage.products.splice(i, 1);
       localStorage.setItem('cart', JSON.stringify(cartLocalStorage));
 
-      // Recalculer le total du panier (A REFAIRE DANS UNE FONCTION)
+      // Recalculer le total du panier
+      sumCart = sumCart - thisPrice;
+      console.log(sumCart);
+      if (sumCart === 0) {
+        localStorage.removeItem('cart') //Supprétion du localStorage en cas de valeur = à 0 pour l'affichage du "Panier vide"
+        emptyCart(); // Afficher le message "panier vide"
+        //let totalBox = document.getElementsByClassName('totalCart');
+        //cart.removeChild(totalBox);
+
+      }
+
+      let txtSumCart = document.getElementById('sum');
+      txtSumCart.innerText = sumCart + ' €'
+
 
 
 

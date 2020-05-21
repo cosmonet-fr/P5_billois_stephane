@@ -13,7 +13,7 @@ for (let i = 0; i < myProducts.products.length; i++) {
 
 }
 // Calcul du total du panier
-  var sumCart = 0;
+  let sumCart = 0;
   for (let i = 0; i < myProducts.products.length; i++) {
     let unitPrice = parseInt(myProducts.products[i].price, 10);
     sumCart = sumCart + unitPrice;
@@ -21,5 +21,5 @@ for (let i = 0; i < myProducts.products.length; i++) {
 console.log(sumCart);
 let totalCart = document.createElement("div");
 totalCart.classList.add("totalCart");
-totalCart.innerHTML = '<h2>Total :</h2><p class="price">' + sumCart + ' €</p>';
+totalCart.innerHTML = '<h2>Total :</h2><p id="sum" class="price">' + sumCart + ' €</p>';
 document.querySelector(".myCart").appendChild(totalCart);
