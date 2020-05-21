@@ -66,8 +66,10 @@ const removeProductOfCart = (idProduct) => {
       if (sumCart === 0) {
         localStorage.removeItem('cart') //Supprétion du localStorage en cas de valeur = à 0 pour l'affichage du "Panier vide"
         emptyCart(); // Afficher le message "panier vide"
-        //let totalBox = document.getElementsByClassName('totalCart');
-        //cart.removeChild(totalBox);
+        console.log('000000000000000000000000000000000000000000000000000000000000000000000 ' + cart);
+        let totalBox = document.getElementById('totalBox')
+        console.log(totalBox);
+        cart.removeChild(totalBox);
 
       }
 
@@ -85,3 +87,10 @@ const removeProductOfCart = (idProduct) => {
 
 
       }
+// Envoi d'infos à l'API
+const sendToApi = (object) => {
+  let request = new XMLHttpRequest();
+  request.open("POST", "http://localhost:3000/api/cameras/order");
+  request.setRequestHeader("Content-Type", "application/json");
+  request.send(JSON.stringify(object));  
+}

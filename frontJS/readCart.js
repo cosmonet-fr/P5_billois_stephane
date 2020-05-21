@@ -21,5 +21,6 @@ for (let i = 0; i < myProducts.products.length; i++) {
 console.log(sumCart);
 let totalCart = document.createElement("div");
 totalCart.classList.add("totalCart");
+totalCart.setAttribute('id', 'totalBox');
 totalCart.innerHTML = '<h2>Total :</h2><p id="sum" class="price">' + sumCart + ' €</p>';
 document.querySelector(".myCart").appendChild(totalCart);

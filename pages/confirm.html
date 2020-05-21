@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr-FR" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/master.min.css">
+    <script src="https://kit.fontawesome.com/aa0ff56e6d.js" crossorigin="anonymous"></script>
+    <title>Merci | Orinoco</title>
+  </head>
+  <body>
+    <nav>
+
+      <div class="mainMenu">
+        <ul>
+          <li> <a href="../index.html"><i class="fas fa-store fa-2x"></i></a> </li>
+          <li><a href="../pages/cart.html"><i class="fas fa-shopping-cart fa-2x"></i></a> </li>
+          <li><a href="mailto:sav@orinoco.com?subject=feedback"><i class="fas fa-envelope fa-2x"></i></a>  </li>
+        </ul>
+      </div>
+
+      <div class="confMenu">
+        <ul>
+          <li><i class="fas fa-lightbulb fa-2x on" onclick="if (localStorage.getItem('darkMod') === 'true') {
+            localStorage.setItem('darkMod', 'false');
+          } else {
+            localStorage.setItem('darkMod', 'true');
+          }
+          document.location.reload(true);" ></i></li>
+        </ul>
+      </div>
+
+
+
+    </nav>
+    <header>
+      <div class="logo">
+        <i class="fas fa-camera-retro fa-6x"></i><h1>Orinoco</h1>
+
+      </div>
+    </header>
+    <section>
+      <div class="page">
+
+      </div>
+    </section>
+
+
+
+    <script src="../frontJS/darkMod.js" charset="utf-8"></script>
+    <script src="../frontJS/myFunctions.js" charset="utf-8"></script>
+    <script src="../frontJS/confirm.js" charset="utf-8"></script>
+  </body>
+</html>
