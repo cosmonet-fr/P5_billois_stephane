@@ -92,5 +92,5 @@ const sendToApi = (object) => {
   let request = new XMLHttpRequest();
   request.open("POST", "http://localhost:3000/api/cameras/order");
   request.setRequestHeader("Content-Type", "application/json");
-  request.send(JSON.stringify(object));  
+  request.send(JSON.stringify(object));
 }

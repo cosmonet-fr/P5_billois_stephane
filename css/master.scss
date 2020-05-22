@@ -142,7 +142,7 @@ nav {
 
 }
 
-.product, .cart, .thisProduct, .eltCart, .totalCart, .form {
+.product, .cart, .thisProduct, .eltCart, .totalCart, .form, .confirm {
   background-color: $colorBackground2;
   box-shadow: .2em .2em .2em $shadow;
 }
@@ -243,14 +243,29 @@ aside {
   justify-content: space-around;
 }
 
+select {
+  margin: 1em;
+  padding: 0.3em;
+  color: white;
+  background-color: $colorA;
+  border-color: transparent;
+  border-radius: 1em;
+}
+
 .btn {
+  margin: 1em;
+  padding: 1em;
   display: block;
   cursor: pointer;
-  color: white;
+  background-color: $colorA;
   border-radius: .4em;
   border: none;
   font-size: 1.3em;
   font-weight: bold;
+  p, i {
+    color: white;
+
+  }
 }
 
 .add {
@@ -323,4 +338,13 @@ input {
 }
 label {
   font-size: 1.5em;
+}
+
+.confirm {
+  margin: 1em;
+  padding: 1em;
+  p {
+    text-align: center;
+    font-size: 1.8em;
+  }
 }

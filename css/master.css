@@ -172,7 +172,7 @@ nav .mainMenu ul {
   justify-content: space-around;
 }
 
-.product, .cart, .thisProduct, .eltCart, .totalCart, .form {
+.product, .cart, .thisProduct, .eltCart, .totalCart, .form, .confirm {
   background-color: white;
   box-shadow: 0.2em 0.2em 0.2em #84817a;
 }
@@ -264,14 +264,29 @@ aside {
   justify-content: space-around;
 }
 
+select {
+  margin: 1em;
+  padding: 0.3em;
+  color: white;
+  background-color: #2980b9;
+  border-color: transparent;
+  border-radius: 1em;
+}
+
 .btn {
+  margin: 1em;
+  padding: 1em;
   display: block;
   cursor: pointer;
-  color: white;
+  background-color: #2980b9;
   border-radius: .4em;
   border: none;
   font-size: 1.3em;
   font-weight: bold;
+}
+
+.btn p, .btn i {
+  color: white;
 }
 
 .add {
@@ -350,6 +365,16 @@ input {
 
 label {
   font-size: 1.5em;
+}
+
+.confirm {
+  margin: 1em;
+  padding: 1em;
+}
+
+.confirm p {
+  text-align: center;
+  font-size: 1.8em;
 }
 
 /*# sourceMappingURL=master.css.map */

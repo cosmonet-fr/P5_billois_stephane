@@ -26,11 +26,12 @@ sendToApi(order_id);
 
 
 
-// Afichage de la page
-let page = document.getElementsByClassName('page');
+// Afichage de la page_confirm
+let page_confirm_confirm = document.getElementById('page_confirm');
+console.log(page_confirm);
 let confirm = document.createElement('div');
-let text = document.createElement('p');
 confirm.classList.add('confirm');
-document.querySelector('page').appendChild(confirm);
-text.innerText = 'Merci ' + firstName + ' d\'avoir choisi Orinoco pour votre commande. À bientôt. :-)'
-document.querySelector('confirm').appendChild(text);
+document.querySelector('#page_confirm').appendChild(confirm);
+let text = document.createElement('p');
+text.innerText = 'Merci ' + firstName + ', d\'avoir choisi Orinoco pour votre commande. À bientôt. :-)'
+document.querySelector('.confirm').appendChild(text);

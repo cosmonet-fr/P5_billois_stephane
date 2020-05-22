@@ -60,8 +60,10 @@
                   </select>
                 </form>
 
+                <div class="btn" id="addToCart">
+                  <!--<p><i class="fas fa-cart-plus"></i> Ajouter au panier</p>-->
 
-                <a id="addToCart" href="">Ajouter au panier</a>
+                </div>
 
               </div>
             </div>
@@ -70,8 +72,8 @@
 
 
         </div>
-        <aside class="cartBox" onclick="window.location.href='cart.html'" >
-          <div id="cart" class="cart">
+        <aside class="cartBox" >
+          <div id="cart" class="cart" onclick="window.location.href='cart.html'" >
             <h3 id="titleCart" >Votre panier</h3>
             <hr / id="hrCart">
             <img id="imgCart" src="../images/cart.svg" alt="Chariot de course">
@@ -89,6 +91,7 @@
     </section>
     <script src="../frontJS/darkMod.js" charset="utf-8"></script>
     <script src="../frontJS/myFunctions.js" charset="utf-8"></script>
+    <script src="frontJS/link.js" charset="utf-8"></script>
     <script src="../frontJS/product.js" charset="utf-8"></script>
     <script src="../frontJS/smallCart.js" charset="utf-8"></script>
   </body>
