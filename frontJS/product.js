@@ -1,4 +1,7 @@
 console.log('run product.js');
+smallCart(); //fonction pour l'aperçu du chariot à droite
+link();
+let cart = JSON.parse(localStorage.getItem('cart'));
 //Changgement du <title> de la page
 let model = urlParam('model'); // Récupération de la valeur en parametre dans l'url [voir urlParam.je]
 document.title = model + ' sur Orinoco'; // changement de la valeur en <title> nomModel </title>
@@ -9,7 +12,7 @@ let price = document.getElementById('price');
 let description = document.getElementById('description');
 let img = document.getElementById('img');
 let listLenses = document.getElementById('listLenses')
-let addToCart = document.getElementById('addToCart')
+let addToCartBtn = document.getElementById('addToCart')
 
 
 // Récupérer les parametres de l'url
@@ -49,18 +52,18 @@ fetch('http://localhost:3000/api/cameras')
       }
 
       //Bouton ajout au panier, ou supprimer du panier
-      addToCart.setAttribute('onclick', "window.location.href='cart.html?id=" + id + "&_id=" + apiData[id]._id + "&name=" + apiData[id].name + "&price=" + apiData[id].price + "'" )
-      addToCart.innerHTML = '<p><i class="fas fa-cart-plus"></i> Ajouter '+ apiData[id].name +' au panier</p>';
+      addToCartBtn.setAttribute('onclick', "window.location.href='cart.html?id=" + id + "&_id=" + apiData[id]._id + "&name=" + apiData[id].name + "&price=" + apiData[id].price + "'" )
+      addToCartBtn.innerHTML = '<p><i class="fas fa-cart-plus"></i> Ajouter '+ apiData[id].name +' au panier</p>';
 
-      for (let i = 0; i < myProducts.products.length; i++) {
-        if (apiData[id]._id === myProducts.products[i]._id) {
-          console.log(myProducts.products[i]._id);
+      for (let i = 0; i < cart.products.length; i++) {
+        if (apiData[id]._id === cart.products[i]._id) {
+          console.log(cart.products[i]._id);
           console.log(apiData[id]._id);
 
-          //addToCart.setAttribute('onclick', "window.location.href='cart.html?remove=" + apiData[id]._id + "'" )
-          //addToCart.innerHTML = '<p><i class="far fa-trash-alt"></i> Retirer '+ apiData[id].name +' du panier</p>';
-          addToCart.setAttribute('onclick', "window.location.href='cart.html'" )
-          addToCart.innerHTML = '<p><i class="fas fa-check"></i> ' + apiData[id].name +' est déjà dans votre panier</p>';
+          //addToCartBtn.setAttribute('onclick', "window.location.href='cart.html?remove=" + apiData[id]._id + "'" )
+          //addToCartBtn.innerHTML = '<p><i class="far fa-trash-alt"></i> Retirer '+ apiData[id].name +' du panier</p>';
+          addToCartBtn.setAttribute('onclick', "window.location.href='cart.html'" )
+          addToCartBtn.innerHTML = '<p><i class="fas fa-check"></i> ' + apiData[id].name +' est déjà dans votre panier</p>';
 
         }
       }
@@ -68,4 +71,4 @@ fetch('http://localhost:3000/api/cameras')
 
 
     })
-console.log(myProducts);
+console.log(cart);

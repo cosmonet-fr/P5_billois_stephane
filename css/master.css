@@ -283,15 +283,6 @@ aside {
   justify-content: space-around;
 }
 
-select {
-  margin: 1em;
-  padding: 0.3em;
-  color: white;
-  background-color: #2980b9;
-  border-color: transparent;
-  border-radius: 1em;
-}
-
 .btn {
   margin: 1em;
   padding: 1em;

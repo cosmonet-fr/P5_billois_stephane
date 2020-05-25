@@ -1,4 +1,6 @@
 console.log("run allProducts.js");
+smallCart(); //fonction pour l'aperçu du chariot à droit
+link();
 let newProduct = document.getElementById("listeProduct");
 let loadingImg = document.getElementById("loading");
 
