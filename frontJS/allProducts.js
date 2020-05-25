@@ -13,12 +13,11 @@ products.onreadystatechange = function () {
 
 
       loadingImg.classList.replace("open", "close");// Fermer l'annimation de chargement par le remplacement de la class open par close
-      console.log(loadingImg);                      // Vérifier
+
 
 
       for (let i = 0; i < responseProducts.length; i++) {
         //responseProducts[i]
-        console.log(responseProducts[i].name);
         let newDivOfProduct = document.createElement("div");                 // Création de la div Produit
         newDivOfProduct.classList.add("product");                            // Ajout de la class="product" à la div
         newDivOfProduct.innerHTML = ' <div class="picture" onclick="window.location.href=\'pages/product.html?id=' + i + '&model=' + responseProducts[i].name + '\'">  <img src="' + responseProducts[i].imageUrl + '" alt=""> <h2><a href="pages/product.html?id=' + i + '&model=' + responseProducts[i].name + '">' + responseProducts[i].name + '</a></h2> <p class="price" >' + responseProducts[i].price + ' €</p></div>' // Ajout du code HTML pour le produit

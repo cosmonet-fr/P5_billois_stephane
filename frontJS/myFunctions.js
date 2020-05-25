@@ -169,7 +169,6 @@ const addToCart = () => {
   let price = urlParam('price');
 
   let cart = JSON.parse(localStorage.getItem('cart'));
-  console.log('La variable "carte" contient: ' + cart);
   if (id != null || _id != null || name != null || price != null)
   {
     console.log('Il y a un objet qui est dans les parametres de l\'url');

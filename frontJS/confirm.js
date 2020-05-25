@@ -24,8 +24,7 @@ sendToApi(products);
 // Afichage de la page_confirm
 
 // Remerciment
-let page_confirm_confirm = document.getElementById('page_confirm');
-console.log(page_confirm);
+let page_confirm = document.getElementById('page_confirm');
 let confirm = document.createElement('div');
 confirm.classList.add('confirm');
 document.querySelector('#page_confirm').appendChild(confirm);
@@ -38,3 +37,5 @@ fetch('http://localhost:3000/api/cameras')
     .then(orderData => {
       console.log(orderData);
     });
+
+localStorage.removeItem('cart');

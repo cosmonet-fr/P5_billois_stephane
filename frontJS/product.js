@@ -17,7 +17,7 @@ let addToCartBtn = document.getElementById('addToCart')
 
 // Récupérer les parametres de l'url
 let id = urlParam('id');
-console.log(id);
+
 
 // Vérifier le support de fetch
 if (window.fetch) {
@@ -29,7 +29,6 @@ if (window.fetch) {
 fetch('http://localhost:3000/api/cameras')
   .then(response => response.json())
     .then(apiData => {
-      console.log(apiData[id].name);
 
       // Ajout des valeures de l'API sur la page
 
@@ -40,12 +39,9 @@ fetch('http://localhost:3000/api/cameras')
 
       // Création d'une boucle pour ajouter tous les objectifs sur la liste du menu déroulant
       for (let i = 0; i < apiData[id].lenses.length; i++) {
-        console.log(apiData[id].lenses[i]);
         let newLenses = document.createElement('option');
-        console.log(newLenses);
         newLenses.innerText = 'Objectif ' + apiData[id].lenses[i];
         newLenses.setAttribute('value', apiData[id].lenses[i]);
-        console.log(document.querySelector('#listLenses'));
         document.querySelector('#listLenses').appendChild(newLenses);
 
 
@@ -57,8 +53,6 @@ fetch('http://localhost:3000/api/cameras')
 
       for (let i = 0; i < cart.products.length; i++) {
         if (apiData[id]._id === cart.products[i]._id) {
-          console.log(cart.products[i]._id);
-          console.log(apiData[id]._id);
 
           //addToCartBtn.setAttribute('onclick', "window.location.href='cart.html?remove=" + apiData[id]._id + "'" )
           //addToCartBtn.innerHTML = '<p><i class="far fa-trash-alt"></i> Retirer '+ apiData[id].name +' du panier</p>';
@@ -71,4 +65,3 @@ fetch('http://localhost:3000/api/cameras')
 
 
     })
-console.log(cart);

@@ -3,9 +3,9 @@ addToCart();
 link();
 
 let cart = JSON.parse(localStorage.getItem('cart'));
-console.log(cart);
+
 let myCart = document.getElementById('myCart');
-console.log(myCart);
+
 
 for (let i = 0; i < cart.products.length; i++) {
   let eltCart = document.createElement("div");                            // Création de la div eltCart
@@ -21,7 +21,6 @@ for (let i = 0; i < cart.products.length; i++) {
     let unitPrice = parseInt(cart.products[i].price, 10);
     sumCart = sumCart + unitPrice;
 }
-console.log(sumCart);
 let totalCart = document.createElement("div");
 totalCart.classList.add("totalCart");
 totalCart.setAttribute('id', 'totalBox');
