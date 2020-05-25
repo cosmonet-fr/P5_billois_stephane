@@ -42,6 +42,15 @@ const emptyCart = () => {
   document.querySelector(".myCart").appendChild(eltCart);
 }
 
+///////////////////////////////////////////////////
+//Supprimer De localStorage uniquement !
+// Supprimer l'élément dans localStorage
+
+
+
+//////////////////////////////////////////////////
+
+
 // Supprimer un article du Panier
 const removeProductOfCart = (idProduct) => {
   let cart = document.getElementById('myCart');
@@ -66,7 +75,7 @@ const removeProductOfCart = (idProduct) => {
       if (sumCart === 0) {
         localStorage.removeItem('cart') //Supprétion du localStorage en cas de valeur = à 0 pour l'affichage du "Panier vide"
         emptyCart(); // Afficher le message "panier vide"
-        console.log('000000000000000000000000000000000000000000000000000000000000000000000 ' + cart);
+        console.log(cart);
         let totalBox = document.getElementById('totalBox')
         console.log(totalBox);
         cart.removeChild(totalBox);

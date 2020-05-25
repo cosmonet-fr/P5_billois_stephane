@@ -1,7 +1,7 @@
 const firstName = urlParam('firstName');
-const lastName = urlParam('lastName');
+document.title = 'Merci ' + firstName + ' | Orinoco'; // changement de la valeur en <title> nomModel </title>
 const contact = {
-  firstName: urlParam('firstName'),
+  firstName: firstName,
   lastName: urlParam('lastName'),
   address: urlParam('address'),
   city: urlParam('code') + ' ' + urlParam('city'),
@@ -14,19 +14,16 @@ for (let i = 0; i < cartLocalStorage.products.length; i++) {
   products.push(cartLocalStorage.products[i]._id);
 }
 
-//Numéro de commande
-order_id = lastName + '-' + Math.random();
-
-
 
 // Envoie des infos au serveur de l'api
 sendToApi(contact);
 sendToApi(products);
-sendToApi(order_id);
 
 
 
 // Afichage de la page_confirm
+
+// Remerciment
 let page_confirm_confirm = document.getElementById('page_confirm');
 console.log(page_confirm);
 let confirm = document.createElement('div');
@@ -35,3 +32,9 @@ document.querySelector('#page_confirm').appendChild(confirm);
 let text = document.createElement('p');
 text.innerText = 'Merci ' + firstName + ', d\'avoir choisi Orinoco pour votre commande. À bientôt. :-)'
 document.querySelector('.confirm').appendChild(text);
+
+fetch('http://localhost:3000/api/cameras')
+  .then(response => response.json())
+    .then(orderData => {
+      console.log(orderData);
+    });

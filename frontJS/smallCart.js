@@ -1,6 +1,6 @@
 console.log('run smallCart.js');
 
-let myProducts = JSON.parse(localStorage.getItem('cart'));
+var myProducts = JSON.parse(localStorage.getItem('cart'));
 console.log(myProducts);
 let myCart = document.getElementById('cart');
 console.log(myCart);
