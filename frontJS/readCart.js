@@ -24,3 +24,9 @@ totalCart.classList.add("totalCart");
 totalCart.setAttribute('id', 'totalBox');
 totalCart.innerHTML = '<h2>Total :</h2><p id="sum" class="price">' + sumCart + ' €</p>';
 document.querySelector(".myCart").appendChild(totalCart);
+
+let removeAll = document.createElement("div");
+removeAll.classList.add('removeAll');
+removeAll.setAttribute('id', 'removeAll');
+removeAll.innerHTML = '<div class ="btn" onclick="localStorage.removeItem(\'cart\'); window.location.href=\'../index.html\'" ><p><i class="far fa-trash-alt"></i> Tout retirer du panier !</p></div>';
+document.querySelector(".myCart").appendChild(removeAll);

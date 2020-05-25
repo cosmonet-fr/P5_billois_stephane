@@ -147,6 +147,10 @@ nav {
   box-shadow: .2em .2em .2em $shadow;
 }
 
+.removeAll {
+  display: inline-block;
+}
+
 .product {
   width: 40%;
   cursor: pointer;
@@ -184,6 +188,18 @@ aside {
   width: 40%;
   max-width: 297px;
   margin-left: 2em;
+  li {
+    font-size: 1.1em;
+    font-weight:bold;
+    color: $colorA;
+  }
+  .cart {
+    position: sticky;
+    top: 5em;
+  }
+  h3 {
+    margin-top: 0.5em;
+  }
 }
 
 

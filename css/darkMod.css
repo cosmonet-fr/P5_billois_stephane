@@ -29,4 +29,12 @@ nav .confMenu .on {
   text-shadow: none;
 }
 
+.cartBox li {
+  color: #6cf;
+}
+
+.btn {
+  background-color: #6cf;
+}
+
 /*# sourceMappingURL=darkMod.css.map */
