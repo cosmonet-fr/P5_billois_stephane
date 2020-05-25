@@ -14,7 +14,7 @@ i, a {
   color: #e74c3c;
 }
 
-.product, .cart, .thisProduct, .cartPage, .eltCart, .totalCart, .form, .confirm {
+.product, .cart, .thisProduct, .cartPage, .eltCart, .totalCart, .form, .confirm, .center {
   background-color: #222f3e;
   box-shadow: 0.2em 0.2em 0.2em black;
 }

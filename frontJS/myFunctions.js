@@ -41,8 +41,9 @@ const link = () => {
 const emptyCart = () => {
   let myCart = document.getElementById('myCart');
   let eltCart = document.createElement("div");                            // Création de la div eltCart
-  eltCart.classList.add("eltCart");                                       // Ajout de la class="eltCart" à la div
-  eltCart.innerHTML = '<h3 class="nameOnCart" > Votre panier est vide !</h3>';
+  eltCart.classList.add("center");                                       // Ajout de la class="eltCart" à la div
+  let numberGif = integerRandom(1, 5);
+  eltCart.innerHTML = '<h3 class="nameOnCart" > Votre panier est vide !</h3><img src="../images/gifs/emptyCarts' + numberGif +'.webp" alt="Panier Vide"><a href="../index.html">Retournez faire des achats.</a>';
   document.querySelector(".myCart").appendChild(eltCart);
 }
 
@@ -236,4 +237,10 @@ const sendToApi = (object) => {
   request.open("POST", "http://localhost:3000/api/cameras/order");
   request.setRequestHeader("Content-Type", "application/json");
   request.send(JSON.stringify(object));
+}
+
+////////////////////////Nombre aléatoir///////////////////////
+function integerRandom(min, max)
+{
+ return Math.floor(Math.random() * (max - min + 1)) + min;
 }

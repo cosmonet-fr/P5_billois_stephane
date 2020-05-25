@@ -142,7 +142,7 @@ nav {
 
 }
 
-.product, .cart, .thisProduct, .eltCart, .totalCart, .form, .confirm {
+.product, .cart, .thisProduct, .eltCart, .totalCart, .form, .confirm, .center {
   background-color: $colorBackground2;
   box-shadow: .2em .2em .2em $shadow;
 }
@@ -362,5 +362,16 @@ label {
   p {
     text-align: center;
     font-size: 1.8em;
+  }
+}
+
+.center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  img {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
