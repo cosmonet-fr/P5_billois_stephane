@@ -29,6 +29,12 @@ nav .confMenu .on {
   text-shadow: none;
 }
 
+@media screen and (max-width: 640px) {
+  nav {
+    background-color: #222f3e;
+  }
+}
+
 .cartBox li {
   color: #6cf;
 }

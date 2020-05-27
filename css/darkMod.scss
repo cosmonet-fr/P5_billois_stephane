@@ -35,6 +35,9 @@ nav {
       text-shadow: none;
     }
   }
+  @media screen and (max-width: 640px) {
+    background-color: $colorBackground2;
+  }
 }
 .cartBox {
   li {

@@ -28,12 +28,19 @@ h1, i {
 h2, .myCart h3 {
   font-size: 2.2em;
   font-weight: bold;
+  @media screen and (max-width: 640px) {
+    font-size: 1.5em;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: .9em;
+  }
 }
 
 h3 {
   font-size: 1.5em;
   text-align: center;
   font-weight: bold;
+
 }
 
 i, a {
@@ -153,8 +160,22 @@ nav {
 .page {
   margin: 0 3em 2em 3em;
   display: flex;
+  @media screen and (max-width: 1149px) {
+    flex-direction: column;
+    h3 {
+      font-size: 1.5em;
+      letter-spacing: -0.075em
+    }
+  }
+  @media screen and (max-width: 375px) {
+    h3 {
+      font-size: .9em;
+    }
+  }
 }
+eltCart {
 
+}
 .block1 {
   width: 80%;
   @media screen and (max-width: 1024px) {
@@ -335,7 +356,9 @@ em {
   font-weight: bold;
   p, i {
     color: white;
-
+  }
+  @media screen and (max-width: 350px) {
+    font-size: 0.8em;
   }
 }
 
@@ -362,6 +385,12 @@ em {
   justify-content: space-between;
   .price {
     font-size: 2.2em;
+    @media screen and (max-width: 640px) {
+      font-size: 1.5em;
+    }
+    @media screen and (max-width: 640px) {
+      font-size: .8em;
+    }
   }
 
 }
@@ -406,9 +435,16 @@ input {
   color: black;
   margin: .5em;
   padding: .5em;
+  @media screen and (max-width: 480px) {
+    font-size: 0.8em;
+    padding: .1em;
+  }
 }
 label {
   font-size: 1.5em;
+  @media screen and (max-width: 480px) {
+    font-size: 0.8em;
+  }
 }
 
 .confirm {

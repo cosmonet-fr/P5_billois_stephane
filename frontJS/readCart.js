@@ -11,7 +11,7 @@ for (let i = 0; i < cart.products.length; i++) {
   let eltCart = document.createElement("div");                            // Création de la div eltCart
   eltCart.classList.add("eltCart");                                       // Ajout de la class="eltCart" à la div
   eltCart.setAttribute("id", cart.products[i]._id);                 // Ajout de l'id pour la fermeture de la div au clique sur la poubelle
-  eltCart.innerHTML = '<h3 class="nameOnCart" ><a href="product.html?id=' + cart.products[i].id + '&model=' + cart.products[i].name + '">' + cart.products[i].name + '</a></h3>  <p class="price" >' + cart.products[i].price + ' € <i class="far fa-trash-alt" onclick="removeProductOfCart(' + '\'' + cart.products[i]._id + '\', ' + '\'' + i + '\'' + ')"></i></p>';
+  eltCart.innerHTML = '<h3 class="nameOnCart" ><a href="product.html?_id=' + cart.products[i]._id + '">' + cart.products[i].name + '</a></h3>  <p class="price" >' + cart.products[i].price + ' € <i class="far fa-trash-alt" onclick="removeProductOfCart(' + '\'' + cart.products[i]._id + '\', ' + '\'' + i + '\'' + ')"></i></p>';
   document.querySelector(".myCart").appendChild(eltCart);
 
 }
@@ -30,5 +30,5 @@ document.querySelector(".myCart").appendChild(totalCart);
 let removeAll = document.createElement("div");
 removeAll.classList.add('removeAll');
 removeAll.setAttribute('id', 'removeAll');
-removeAll.innerHTML = '<div class ="btn" onclick="localStorage.removeItem(\'cart\'); window.location.href=\'../index.html\'" ><p><i class="far fa-trash-alt"></i> Tout retirer du panier !</p></div>';
+removeAll.innerHTML = '<div class ="btn" onclick="localStorage.removeItem(\'cart\'); window.location.href=\'../index.html\'" ><p><i class="far fa-trash-alt"></i> Tout retirer<em> du panier !</em></p></div>';
 document.querySelector(".myCart").appendChild(removeAll);

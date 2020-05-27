@@ -82,7 +82,7 @@ fetch('http://localhost:3000/api/cameras/' + id)
               //addToCartBtn.setAttribute('onclick', "window.location.href='cart.html?remove=" + apiData._id + "'" )
               //addToCartBtn.innerHTML = '<p><i class="far fa-trash-alt"></i> Retirer '+ apiData.name +' du panier</p>';
               addToCartBtn.setAttribute('onclick', "window.location.href='cart.html'" )
-              addToCartBtn.innerHTML = '<p><i class="fas fa-check"></i> ' + apiData.name +' est déjà dans votre panier</p>';
+              addToCartBtn.innerHTML = '<p><i class="fas fa-check"></i><em> ' + apiData.name +' est déjà </em>dans votre panier</p>';
 
             }
           }
