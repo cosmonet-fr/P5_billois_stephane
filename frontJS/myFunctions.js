@@ -1,29 +1,5 @@
 console.log('run myFunctions.js');
 
-//La fonction pour ce connecter à l'api et récupérer ses données.
-
-
-//const connectToApi = (product) => {
-//  // Vérifier le support de fetch
-//  if (window.fetch) {
-//    console.log('Fetch est supporté par votre navigateur.');
-//  } else {
-//    console.error('Fetch n\'est pas supporté par votre navigateur.');
-//    window.alert('Votre navigateur n\'est pas suffisamment récent pour ce site web.');
-//  }
-//
-//
-//  // Se connecter à l'api
-//  fetch('http://localhost:3000/api/cameras')
-//    .then(response => response.json())
-//      .then(apiData => {
-//        console.log(apiData[product]);
-//        return apiData[product];
-//      })
-//
-//}
-
-
 // La fonction pour récupérer les parametres dans l'url (= "$_GET" en php)
 const urlParam = (myParam) => {
   let allParamsOfUrl = new URLSearchParams(window.location.search);
@@ -40,12 +16,81 @@ const link = () => {
 // Afficher "panier vide" sur la page cart.html
 const emptyCart = () => {
   let myCart = document.getElementById('myCart');
-  let eltCart = document.createElement("div");                            // Création de la div eltCart
+  let eltCart = document.createElement("div");                           // Création de la div eltCart
   eltCart.classList.add("center");                                       // Ajout de la class="eltCart" à la div
-  let numberGif = integerRandom(1, 5);
+  let numberGif = integerRandom(1, 1);
   eltCart.innerHTML = '<h3 class="nameOnCart" > Votre panier est vide !</h3><img src="../images/gifs/emptyCarts' + numberGif +'.webp" alt="Panier Vide"><a href="../index.html">Retournez faire des achats.</a>';
   document.querySelector(".myCart").appendChild(eltCart);
 }
+
+////////////////////Add To Cart//////////////////////////////
+const addToCart = () => {
+  let id = urlParam('id');
+  let _id = urlParam('_id');
+  let name = urlParam('name');
+  let price = urlParam('price');
+
+  let cart = JSON.parse(localStorage.getItem('cart'));
+  if (id != null || _id != null || name != null || price != null)
+  {
+    console.log('Il y a un objet qui est dans les parametres de l\'url');
+
+    //Vérifier si il y a quelque chose dans le panier
+    if (cart === null)
+    {
+      console.log('Cart null Je peux le créer.');
+      cart = {createdAt: new Date(), products : [
+        {
+          id: id,
+          _id: _id,
+          name: name,
+          price: price
+        }
+      ]};
+
+
+
+    } else if (cart != null) {
+      let isAlreadyInCart = false;
+      for (var i = 0; i < cart.products.length; i++) {
+        if (cart.products[i]._id === _id) {
+          isAlreadyInCart = true;
+
+        }
+      }
+      if (isAlreadyInCart === false) {
+        cart.products.push({
+          id: id,
+          _id: _id,
+          name: name,
+          price: price
+        });
+
+      } else {
+        console.error('Un article ne peut être ajouté qu\'un seul fois dans votre panier');
+      }
+
+    }
+
+
+
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+  } else {
+    if (cart === null) {
+      console.error('Il n\'y a pas d\'objet dans les parametres de l\'url');
+
+
+      emptyCart();
+
+
+    }
+
+  }
+
+}
+/////////////////////////////////////////////////////////////
 
 // supprimer Bouton pour tout retirer du Panier
 const noneRemoveAllBtn = () => {
@@ -56,6 +101,7 @@ const noneRemoveAllBtn = () => {
 
 ///////////////////////////////////////////////////
 //Supprimer De localStorage uniquement !
+
 // Supprimer l'élément dans localStorage
 //////////////////////////////////////////////////
 
@@ -69,14 +115,15 @@ const removeProductOfCart = (idProduct) => {
   cart.removeChild(removeProduct);    // Supprime l'élément removeProduct de l'élément cart
 
 
-  // Supprimer l'élément dans localStorage
+   //Supprimer l'élément dans localStorage
   let cartLocalStorage = JSON.parse(localStorage.getItem('cart'));
   for (var i = 0; i < cartLocalStorage.products.length; i++) {
-    //let toDelete = false;
+
     if (cartLocalStorage.products[i]._id === idProduct) {
-      var thisPrice = cartLocalStorage.products[i].price;
+      let thisPrice = cartLocalStorage.products[i].price;
       cartLocalStorage.products.splice(i, 1);
       localStorage.setItem('cart', JSON.stringify(cartLocalStorage));
+
 
       // Recalculer le total du panier
       sumCart = sumCart - thisPrice;
@@ -161,74 +208,23 @@ const removeProductOfCart = (idProduct) => {
       }
 /////////////////////////////////////////////////////////////
 
-////////////////////Add To Cart//////////////////////////////
-const addToCart = () => {
-  let id = urlParam('id');
-  let _id = urlParam('_id');
-  let name = urlParam('name');
-  let price = urlParam('price');
-
-  let cart = JSON.parse(localStorage.getItem('cart'));
-  if (id != null || _id != null || name != null || price != null)
-  {
-    console.log('Il y a un objet qui est dans les parametres de l\'url');
-
-    //Vérifier si il y a quelque chose dans le panier
-    if (cart === null)
-    {
-      console.log('Cart null Je peux le créer.');
-      cart = {createdAt: new Date(), products : [
-        {
-          id: id,
-          _id: _id,
-          name: name,
-          price: price
-        }
-      ]};
-
-
-
-    } else if (cart != null) {
-      let isAlreadyInCart = false;
-      for (var i = 0; i < cart.products.length; i++) {
-        if (cart.products[i]._id === _id) {
-          isAlreadyInCart = true;
-
-        }
-      }
-      if (isAlreadyInCart === false) {
-        cart.products.push({
-          id: id,
-          _id: _id,
-          name: name,
-          price: price
-        });
-
-      } else {
-        console.error('Un article ne peut être ajouté qu\'un seul fois dans votre panier');
-      }
-
-    }
-
-
-
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-  } else {
-    if (cart === null) {
-      console.error('Il n\'y a pas d\'objet dans les parametres de l\'url');
-
-
-      emptyCart();
-
-
-    }
-
+/////////////////////////////Ajout direct d'un produit sans passer par cart.html///////////////////////////////////
+const directAddToLocalStorage = (idOfProduct, _idOfProduct, nameOfProduct, priceOfProduct) => {
+  let isAlreadyInCart = false;
+  for (var i = 0; i < cart.product.length; i++) {
+    cart.product[i]._id === _id
   }
+  cart.products.push({
+    id: idOfProduct,
+    _id: _idOfProduct,
+    name: nameOfProduct,
+    price: priceOfProduct
+  });
 
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
-/////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 // Envoi d'infos à l'API
 const sendToApi = (object) => {
@@ -239,7 +235,6 @@ const sendToApi = (object) => {
 }
 
 ////////////////////////Nombre aléatoir///////////////////////
-function integerRandom(min, max)
-{
+const integerRandom = (min, max) => {
  return Math.floor(Math.random() * (max - min + 1)) + min;
 }

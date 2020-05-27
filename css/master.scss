@@ -72,6 +72,9 @@ nav {
       padding: 0.4em 1em;
       font-size: 1.2em;
       font-weight: bold;
+      @media screen and (max-width: 640px) {
+        margin: 0;
+      }
     }
     ul {
       background-color: $colorA;
@@ -94,8 +97,26 @@ nav {
       border-radius: 0 0 0.5em 0;
     }
   }
+  @media screen and (max-width: 640px) {
+    background-color: $colorA;
+  }
 
 }
+.desk {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
+}
+
+.gsm {
+  @media screen and (min-width: 640px) {
+    display: none;
+  }
+}
+
 .confMenu {
   ul {
     border-radius: 0 0 0 0.5em;
@@ -115,6 +136,9 @@ nav {
   //margin: 8em 0;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 }
 
 .open {
@@ -133,12 +157,18 @@ nav {
 
 .block1 {
   width: 80%;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 }
 
 .allProducts {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+  }
 
 }
 
@@ -165,6 +195,9 @@ nav {
   }
   &:hover {
     transform: scale(1.05);
+  }
+  @media screen and (max-width: 640px) {
+    width: 100%;
   }
 }
 
@@ -199,6 +232,9 @@ aside {
   }
   h3 {
     margin-top: 0.5em;
+  }
+  @media screen and (max-width: 1024px) {
+    display: none;
   }
 }
 
@@ -245,18 +281,37 @@ aside {
   label {
     font-weight: bold;
     color: $colorA;
+    @media screen and (max-width: 640px) {
+      font-size: 0.8em;
+      font-weight: normal;
+    }
   }
 
+}
+em {
+  font-style: normal;
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 }
 
 .topDesc {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    h2 {
+      text-align: center;
+    }
+  }
 }
 
 .footDesc {
   display: flex;
   justify-content: space-around;
+  @media screen and (max-width: 640px) {
+    display: grid;
+  }
 }
 
 //select {

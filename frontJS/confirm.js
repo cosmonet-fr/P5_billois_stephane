@@ -1,3 +1,7 @@
+let form = document.getElementById('form');
+form.addEventListener('submit', function() {
+
+});
 const firstName = urlParam('firstName');
 document.title = 'Merci ' + firstName + ' | Orinoco'; // changement de la valeur en <title> nomModel </title>
 const contact = {
