@@ -1,7 +1,7 @@
-let form = document.getElementById('form');
-form.addEventListener('submit', function() {
+//let form = document.getElementById('form');
+//form.addEventListener('submit', function() {
 
-});
+//});
 const firstName = urlParam('firstName');
 document.title = 'Merci ' + firstName + ' | Orinoco'; // changement de la valeur en <title> nomModel </title>
 const contact = {
@@ -33,7 +33,7 @@ let confirm = document.createElement('div');
 confirm.classList.add('confirm');
 document.querySelector('#page_confirm').appendChild(confirm);
 let text = document.createElement('p');
-text.innerText = 'Merci ' + firstName + ', d\'avoir choisi Orinoco pour votre commande. À bientôt. :-)'
+text.innerText = 'Merci ' + firstName + ', d\'avoir choisi Orinoco pour votre commande ! À bientôt ! :-)'
 document.querySelector('.confirm').appendChild(text);
 
 fetch('http://localhost:3000/api/cameras')

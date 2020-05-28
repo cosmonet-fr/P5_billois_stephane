@@ -70,15 +70,15 @@
 
         <div class="form">
           <h2>Votre contact :</h2>
-          <form id="form" class="" action="confirm.html" method="post" onsubmit="" >
+          <form id="form" class="" action="confirm.html" method="get" onsubmit="" >
             <div class="eltForm">
               <p>
-                <p> <label for="firstName">Votre prénom : </label> </p> <input type="text" name="firstName" id="firstName" maxlength="35" placeholder="Ex : Aurore" required>
+                <p> <label for="firstName">Votre prénom : </label> </p> <input type="text" name="firstName" id="firstName" maxlength="35" pattern="[^0-9]{2,35}" placeholder="Ex : Aurore" required>
               </p>
             </div>
             <div class="eltForm">
               <p>
-                <p> <label for="lastName">Votre nom : </label> </p> <input type="text" name="lastName" id="lastName" maxlength="35" placeholder="Ex : Dupont" required>
+                <p> <label for="lastName">Votre nom : </label> </p> <input type="text" name="lastName" id="lastName" maxlength="35" pattern="[^0-9]{2,35}" placeholder="Ex : Dupont" required>
               </p>
             </div>
               <div class="eltForm">
@@ -88,17 +88,17 @@
               </div>
               <div class="eltForm">
               <p>
-                <p> <label for="code">Votre Code Postal : </label> </p> <input type="text" name="code" id="code" minlength="5" maxlength="5" placeholder="Ex : 15000" required>
+                <p> <label for="code">Votre Code Postal : </label> </p> <input type="text" name="code" id="code" minlength="5" maxlength="5" pattern="[0-9]{5,5}" placeholder="Ex : 15000" required>
               </p>
               </div>
               <div class="eltForm">
               <p>
-                <p> <label for="city">Votre ville : </label> </p> <input type="text" name="city" id="city" maxlength="35" placeholder="Ex : Aurillac" required>
+                <p> <label for="city">Votre ville : </label> </p> <input type="text" name="city" id="city" maxlength="35" pattern="[^0-9]{2,35}" placeholder="Ex : Aurillac" required>
               </p>
               </div>
               <div class="eltForm">
               <p>
-                <p> <label for="email">Votre e-mail : </label> </p> <input type="email" name="email" id="email" maxlength="35" placeholder="Ex : aurore@aureos.fr" required>
+                <p> <label for="email">Votre e-mail : </label> </p> <input type="email" name="email" id="email" maxlength="35" pattern="[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})" placeholder="Ex:aurore@aureos.fr" required>
               </p>
               </div>
               <div class="eltForm">
