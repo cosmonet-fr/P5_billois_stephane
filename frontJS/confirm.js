@@ -1,7 +1,16 @@
-//let form = document.getElementById('form');
-//form.addEventListener('submit', function() {
+console.log(checkLettersOnly(urlParam('firstName')));
 
-//});
+if (checkLettersOnly(urlParam('firstName')) === true || checkLettersOnly(urlParam('lastName')) === true || checkLettersOnly(urlParam('city'))   ) {
+  console.log('ok');
+
+} else {
+  console.error('Données non-conformes');
+}
+
+
+console.log(urlParam('firstName'));
+
+
 const firstName = urlParam('firstName');
 document.title = 'Merci ' + firstName + ' | Orinoco'; // changement de la valeur en <title> nomModel </title>
 const contact = {

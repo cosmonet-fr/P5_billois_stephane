@@ -238,3 +238,9 @@ const sendToApi = (object) => {
 const integerRandom = (min, max) => {
  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+//////////////////Controler les données///////////////////////
+
+const checkLettersOnly = (data) => {
+  return /[^0-9]{2,35}/.test(data);
+}
