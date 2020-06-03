@@ -1,3 +1,13 @@
+
+const form = document.getElementById('form');
+form.addEventListener('submit', function(event){
+
+  console.log(event);
+  let formData = new FormData(form);
+  console.log(formData.entries());
+
+});
+
 console.log(checkLettersOnly(urlParam('firstName')));
 
 if (checkLettersOnly(urlParam('firstName')) === true || checkLettersOnly(urlParam('lastName')) === true || checkLettersOnly(urlParam('city'))   ) {
@@ -8,7 +18,7 @@ if (checkLettersOnly(urlParam('firstName')) === true || checkLettersOnly(urlPara
 }
 
 
-console.log(urlParam('firstName'));
+
 
 
 const firstName = urlParam('firstName');
