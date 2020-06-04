@@ -43,7 +43,7 @@ fetch('http://localhost:3000/api/cameras/' + id)
 
         let eltCart = document.createElement("div");                           // Création de la div eltCart
         eltCart.classList.add("center");                                       // Ajout de la class="eltCart" à la div
-        let numberGif = integerRandom(1, 2);
+        let numberGif = integerRandom(1, 3);
         eltCart.innerHTML = '<h3 class="nameOnCart" > Cette page n\'existe pas</h3><img src="../images/gifs/404_' + numberGif +'.webp" alt="404"><a href="../index.html">Retournez faire des achats.</a>';
         document.querySelector(".block1").appendChild(eltCart);
 
