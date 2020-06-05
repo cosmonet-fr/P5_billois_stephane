@@ -36,19 +36,18 @@ document.querySelector(".myCart").appendChild(removeAll);
 
 
 ///////////////////////// Form avec POST /////////////////////////
-let contact = {} //Objet contenant les conctactes à envoyer à l'API
-let products = []; //Tableau avec _id des produits à commander, à envoyer à l'API
-
-
-
 const form = document.getElementById('form');
-form.addEventListener('submit', function(event){
 
-  console.log(event);
-  let formData = new FormData(document.getElementById('form'));
-  console.log(formData.entries());
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  let formData = new FormData(form);
+
+  const contactData = {
+  		"name": null
+  };
+
+formData.forEach((value, key) => {formData[key] = value});
+var json = JSON.stringify(formData);
+console.log(json);
 
 });
-formData = new FormData(document.getElementById('form'));
-console.log(formData.entries());
-for(data of formData.entries()){console.log(data)}
