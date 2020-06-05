@@ -32,3 +32,22 @@ removeAll.classList.add('removeAll');
 removeAll.setAttribute('id', 'removeAll');
 removeAll.innerHTML = '<div class ="btn" onclick="localStorage.removeItem(\'cart\'); window.location.href=\'../index.html\'" ><p><i class="far fa-trash-alt"></i> Tout retirer<em> du panier !</em></p></div>';
 document.querySelector(".myCart").appendChild(removeAll);
+
+
+
+///////////////////////// Form avec POST /////////////////////////
+const form = document.getElementById('form');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  let formData = new FormData(form);
+
+  const contactData = {
+  		"name": null
+  };
+
+formData.forEach((value, key) => {formData[key] = value});
+var json = JSON.stringify(formData);
+console.log(json);
+
+});
