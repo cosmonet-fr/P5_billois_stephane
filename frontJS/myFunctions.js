@@ -109,11 +109,6 @@ const noneRemoveAllBtn = () => {
 }
 
 ///////////////////////////////////////////////////
-//Supprimer De localStorage uniquement !
-
-// Supprimer l'élément dans localStorage
-//////////////////////////////////////////////////
-
 
 ///////////////////Supprimer un article du Panier////////////////////
 const removeProductOfCart = (idProduct) => {
@@ -217,24 +212,6 @@ const removeProductOfCart = (idProduct) => {
       }
 /////////////////////////////////////////////////////////////
 
-/////////////////////////////Ajout direct d'un produit sans passer par cart.html///////////////////////////////////
-const directAddToLocalStorage = (idOfProduct, _idOfProduct, nameOfProduct, priceOfProduct) => {
-  let isAlreadyInCart = false;
-  for (var i = 0; i < cart.product.length; i++) {
-    cart.product[i]._id === _id
-  }
-  cart.products.push({
-    id: idOfProduct,
-    _id: _idOfProduct,
-    name: nameOfProduct,
-    price: priceOfProduct
-  });
-
-  localStorage.setItem('cart', JSON.stringify(cart));
-}
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 // Envoi d'infos à l'API
 const sendToApi = (object) => {
   let request = new XMLHttpRequest();
@@ -246,10 +223,4 @@ const sendToApi = (object) => {
 ////////////////////////Nombre aléatoir///////////////////////
 const integerRandom = (min, max) => {
  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-//////////////////Controler les données///////////////////////
-
-const checkLettersOnly = (data) => {
-  return /[^0-9]{2,35}/.test(data);
 }

@@ -79,8 +79,7 @@ fetch('http://localhost:3000/api/cameras/' + id)
           for (let i = 0; i < cart.products.length; i++) {
             if (apiData._id === cart.products[i]._id) {
 
-              //addToCartBtn.setAttribute('onclick', "window.location.href='cart.html?remove=" + apiData._id + "'" )
-              //addToCartBtn.innerHTML = '<p><i class="far fa-trash-alt"></i> Retirer '+ apiData.name +' du panier</p>';
+
               addToCartBtn.setAttribute('onclick', "window.location.href='cart.html'" )
               addToCartBtn.innerHTML = '<p><i class="fas fa-check"></i><em> ' + apiData.name +' est déjà </em>dans votre panier</p>';
 
@@ -89,8 +88,6 @@ fetch('http://localhost:3000/api/cameras/' + id)
 
         }
 
-        //let btnDirect = document.getElementById('directAdd'); // Pour directAdd
-        //btnDirect.setAttribute('onclick', "directAddToLocalStorage(" + id + ", '" + this_id + "', '" + thisName + "', '" + thisPrice + "');"); // Pour directAdd
 
 
 
