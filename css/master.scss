@@ -344,7 +344,7 @@ em {
 //  border-radius: 1em;
 //}
 
-.btn {
+.btn, .sendBtn {
   margin: 1em;
   padding: 1em;
   display: block;
@@ -354,6 +354,7 @@ em {
   border: none;
   font-size: 1.3em;
   font-weight: bold;
+  color: white;
   p, i {
     color: white;
   }

@@ -47,7 +47,7 @@ form.addEventListener('submit', function(event) {
   };
 
 formData.forEach((value, key) => {formData[key] = value});
-var json = JSON.stringify(formData);
-console.log(json);
+localStorage.setItem('contact', JSON.stringify(formData));
+
 
 });

@@ -403,7 +403,7 @@ em {
   }
 }
 
-.btn {
+.btn, .sendBtn {
   margin: 1em;
   padding: 1em;
   display: block;
@@ -413,14 +413,15 @@ em {
   border: none;
   font-size: 1.3em;
   font-weight: bold;
+  color: white;
 }
 
-.btn p, .btn i {
+.btn p, .btn i, .sendBtn p, .sendBtn i {
   color: white;
 }
 
 @media screen and (max-width: 350px) {
-  .btn {
+  .btn, .sendBtn {
     font-size: 0.8em;
   }
 }

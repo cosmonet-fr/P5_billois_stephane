@@ -11,10 +11,19 @@ const urlParam = (myParam) => {
 const link = () => {
   let url = window.location.protocol + "//" + window.location.host + window.location.pathname;
 }
-////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
 // Afficher "panier vide" sur la page cart.html
 const emptyCart = () => {
+  // Fermer le formulaire
+  let page = document.getElementById('page');                            //Page
+  let boxForm = document.getElementById('boxForm');                      //Formulaire à Fermer
+  page.removeChild(boxForm);
+
+  // Ouvrire le gif
   let myCart = document.getElementById('myCart');
   let eltCart = document.createElement("div");                           // Création de la div eltCart
   eltCart.classList.add("center");                                       // Ajout de la class="eltCart" à la div
