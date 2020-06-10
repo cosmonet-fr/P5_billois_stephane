@@ -1,127 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr-FR" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/master.min.css">
-    <script src="https://kit.fontawesome.com/aa0ff56e6d.js" crossorigin="anonymous"></script>
-    <title>Mon Panier | Orinoco</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  </head>
-  <body>
-    <nav>
-      <div class="desk">
-        <div class="mainMenu">
-          <ul>
-            <li> <a class="store" href="../index.html"><i class="fas fa-store fa-2x"></i></a> </li>
-            <li><a href="cart.html"><i class="fas fa-shopping-cart fa-2x activ"></i></a> </li>
-            <li><a href="mailto:sav@orinoco.com?subject=feedback"><i class="fas fa-envelope fa-2x"></i></a>  </li>
-          </ul>
-        </div>
-
-        <div class="confMenu">
-          <ul>
-            <li><i class="fas fa-lightbulb fa-2x on" onclick="if (localStorage.getItem('darkMod') === 'true') {
-              localStorage.setItem('darkMod', 'false');
-            } else {
-              localStorage.setItem('darkMod', 'true');
-            }
-            document.location.reload(true);" ></i></li>
-          </ul>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/master.min.css">
+  <script src="https://kit.fontawesome.com/aa0ff56e6d.js" crossorigin="anonymous"></script>
+  <title>Mon Panier | Orinoco</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+</head>
+<body>
+  <nav>
+    <div class="desk">
+      <div class="mainMenu">
+        <ul>
+          <li> <a class="store" href="../index.html"><i class="fas fa-store fa-2x"></i></a> </li>
+          <li><a href="cart.html"><i class="fas fa-shopping-cart fa-2x activ"></i></a> </li>
+          <li><a href="mailto:sav@orinoco.com?subject=feedback"><i class="fas fa-envelope fa-2x"></i></a>  </li>
+        </ul>
       </div>
 
-      <div class="gsm">
-        <div class="mainMenu">
-          <ul>
-            <li> <a class="store" href="../index.html"><i class="fas fa-camera-retro fa-2x"></i></a> </li>
-            <li><a href="cart.html"><i class="fas fa-shopping-cart fa-2x activ"></i></a> </li>
-            <li><a href="mailto:sav@orinoco.com?subject=feedback"><i class="fas fa-envelope fa-2x"></i></a>  </li>
-            <li><i class="fas fa-lightbulb fa-2x on" onclick="if (localStorage.getItem('darkMod') === 'true') {
-              localStorage.setItem('darkMod', 'false');
-            } else {
-              localStorage.setItem('darkMod', 'true');
-            }
-            document.location.reload(true);" ></i></li>
-          </ul>
-        </div>
+      <div class="confMenu">
+        <ul>
+          <li><i class="fas fa-lightbulb fa-2x on" onclick="if (localStorage.getItem('darkMod') === 'true') {
+            localStorage.setItem('darkMod', 'false');
+          } else {
+            localStorage.setItem('darkMod', 'true');
+          }
+          document.location.reload(true);" ></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gsm">
+      <div class="mainMenu">
+        <ul>
+          <li> <a class="store" href="../index.html"><i class="fas fa-camera-retro fa-2x"></i></a> </li>
+          <li><a href="cart.html"><i class="fas fa-shopping-cart fa-2x activ"></i></a> </li>
+          <li><a href="mailto:sav@orinoco.com?subject=feedback"><i class="fas fa-envelope fa-2x"></i></a>  </li>
+          <li><i class="fas fa-lightbulb fa-2x on" onclick="if (localStorage.getItem('darkMod') === 'true') {
+            localStorage.setItem('darkMod', 'false');
+          } else {
+            localStorage.setItem('darkMod', 'true');
+          }
+          document.location.reload(true);" ></i></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+
+
+  </nav>
+  <header>
+    <div class="logo">
+      <i class="fas fa-camera-retro fa-6x"></i><h1>Orinoco</h1>
+
+    </div>
+  </header>
+  <section>
+
+    <h2 class="h2Cart" >Votre panier :</h2>
+    <div id="page" class="page">
+      <div id="myCart" class="myCart">
+
 
       </div>
 
 
 
+      <div id="boxForm" class="form">
+        <h2>Votre contact :</h2>
+        <form id="form" class="" action="#" method="post" >
+          <div class="eltForm">
+            <p>
+              <p> <label for="firstName">Votre prénom : </label> </p> <input type="text" name="firstName" id="firstName" pattern="[^0-9]{1,500}" placeholder="Ex : Aurore" title="Veuillez compléter ce champ avec votre prénom" required>
+            </p>
+          </div>
+          <div class="eltForm">
+            <p>
+              <p> <label for="lastName">Votre nom : </label> </p> <input type="text" name="lastName" id="lastName" pattern="[^0-9]{1,500}" placeholder="Ex : Dupont" title="Veuillez compléter ce champ avec votre nom" required>
+            </p>
+          </div>
+          <div class="eltForm">
+            <p>
+              <p> <label for="address">Votre adresse : </label> </p> <input type="text" name="address" id="address" placeholder="Ex : 3 Rue de la Liberté" title="Veuillez compléter ce champ avec votre adresse" required>
+            </p>
+          </div>
+          <div class="eltForm">
+            <p>
+              <p> <label for="code">Votre Code Postal : </label> </p> <input type="text" name="code" id="code" minlength="5" maxlength="5" pattern="[0-9]{5,5}" placeholder="Ex : 15000" title="Veuillez compléter ce champ avec votre Code Postal" required>
+            </p>
+          </div>
+          <div class="eltForm">
+            <p>
+              <p> <label for="city">Votre ville : </label> </p> <input type="text" name="city" id="city" pattern="[^0-9]{2,35}" placeholder="Ex : Aurillac" title="Veuillez compléter ce champ avec votre Ville" required>
+            </p>
+          </div>
+          <div class="eltForm">
+            <p>
+              <p> <label for="email">Votre e-mail : </label> </p> <input type="email" name="email" id="email" pattern="[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})" placeholder="Ex : aurore@aureos.fr" title="Veuillez compléter ce champ avec votre e-mail" required>
+            </p>
+          </div>
+          <div class="eltForm">
+            <p>
 
-    </nav>
-    <header>
-      <div class="logo">
-        <i class="fas fa-camera-retro fa-6x"></i><h1>Orinoco</h1>
-
-      </div>
-    </header>
-    <section>
-
-      <h2 class="h2Cart" >Votre panier :</h2>
-      <div id="page" class="page">
-        <div id="myCart" class="myCart">
-
-
+              <input class="sendBtn" type="submit" value="Envoyer"/>
+              <!--<div class="btn" onclick="console.log('tata');">
+              <p><i class="far fa-paper-plane"></i> Emvoyer</p>
+            </div>-->
+          </p>
         </div>
 
+      </form>
 
-
-        <div id="boxForm" class="form">
-          <h2>Votre contact :</h2>
-          <form id="form" class="" action="#" method="post" >
-            <div class="eltForm">
-              <p>
-                <p> <label for="firstName">Votre prénom : </label> </p> <input type="text" name="firstName" id="firstName" pattern="[^0-9]{1,500}" placeholder="Ex : Aurore" title="Veuillez compléter ce champ avec votre prénom" required>
-              </p>
-            </div>
-            <div class="eltForm">
-              <p>
-                <p> <label for="lastName">Votre nom : </label> </p> <input type="text" name="lastName" id="lastName" pattern="[^0-9]{1,500}" placeholder="Ex : Dupont" title="Veuillez compléter ce champ avec votre nom" required>
-              </p>
-            </div>
-              <div class="eltForm">
-              <p>
-                <p> <label for="address">Votre adresse : </label> </p> <input type="text" name="address" id="address" placeholder="Ex : 3 Rue de la Liberté" title="Veuillez compléter ce champ avec votre adresse" required>
-              </p>
-              </div>
-              <div class="eltForm">
-              <p>
-                <p> <label for="code">Votre Code Postal : </label> </p> <input type="text" name="code" id="code" minlength="5" maxlength="5" pattern="[0-9]{5,5}" placeholder="Ex : 15000" title="Veuillez compléter ce champ avec votre Code Postal" required>
-              </p>
-              </div>
-              <div class="eltForm">
-              <p>
-                <p> <label for="city">Votre ville : </label> </p> <input type="text" name="city" id="city" pattern="[^0-9]{2,35}" placeholder="Ex : Aurillac" title="Veuillez compléter ce champ avec votre Ville" required>
-              </p>
-              </div>
-              <div class="eltForm">
-              <p>
-                <p> <label for="email">Votre e-mail : </label> </p> <input type="email" name="email" id="email" pattern="[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})" placeholder="Ex : aurore@aureos.fr" title="Veuillez compléter ce champ avec votre e-mail" required>
-              </p>
-              </div>
-              <div class="eltForm">
-              <p>
-
-                <input class="sendBtn" type="submit" value="Envoyer" onclick="window.location.href='confirm.html'" />
-                <!--<div class="btn" onclick="console.log('tata');">
-                  <p><i class="far fa-paper-plane"></i> Emvoyer</p>
-                </div>-->
-              </p>
-              </div>
-
-          </form>
-
-        </div>
-      </div>
-    </section>
+    </div>
+  </div>
+</section>
 
 
 
-    <script src="../frontJS/darkMod.js" charset="utf-8"></script>
-    <script src="../frontJS/myFunctions.js" charset="utf-8"></script>
-    <script src="../frontJS/readCart.js" charset="utf-8"></script>
+<script src="../frontJS/darkMod.js" charset="utf-8"></script>
+<script src="../frontJS/myFunctions.js" charset="utf-8"></script>
+<script src="../frontJS/readCart.js" charset="utf-8"></script>
 
-  </body>
+</body>
 </html>

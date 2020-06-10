@@ -119,7 +119,7 @@ const removeProductOfCart = (idProduct) => {
   cart.removeChild(removeProduct);    // Supprime l'élément removeProduct de l'élément cart
 
 
-   //Supprimer l'élément dans localStorage
+  //Supprimer l'élément dans localStorage
   let cartLocalStorage = JSON.parse(localStorage.getItem('cart'));
   for (var i = 0; i < cartLocalStorage.products.length; i++) {
 
@@ -144,7 +144,11 @@ const removeProductOfCart = (idProduct) => {
       }
 
       let txtSumCart = document.getElementById('sum');
-      txtSumCart.innerText = sumCart + ' €'
+      if (txtSumCart !== null) {
+        txtSumCart.innerText = sumCart + ' €'
+      } else {
+        console.log('Panier vide. Total = nulle.');
+      }
 
 
 
@@ -154,62 +158,60 @@ const removeProductOfCart = (idProduct) => {
     }
 
   }
-///////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////
 
-/////////////////////////////Small Cart////////////////////////////
+  /////////////////////////////Small Cart////////////////////////////
+}
+const smallCart = () => {
+  let cart = JSON.parse(localStorage.getItem('cart'));
+  if (cart !== null) {
+    let myCart = document.getElementById('cartId');
+
+    if (cart.products.length > 0) {
+
+      // une variable pour le pluriel de "article(s)".
+      if (cart.products.length > 1) {
+        var s = 's';
+      } else {
+        var s = ' ';
       }
-      const smallCart = () => {
-        let cart = JSON.parse(localStorage.getItem('cart'));
-        if (cart !== null) {
-          console.log(cart);
-          let myCart = document.getElementById('cartId');
-          console.log(myCart);
-
-          if (cart.products.length > 0) {
-
-            // une variable pour le pluriel de "article(s)".
-            if (cart.products.length > 1) {
-              var s = 's';
-            } else {
-              var s = ' ';
-            }
 
 
-            let h3 = document.createElement('h3');
-            h3.innerText = 'Votre panier contient ' + cart.products.length + ' article' + s;
-            document.querySelector("#cartId").appendChild(h3);
-            let hr = document.createElement('hr');
-            document.querySelector("#cartId").appendChild(hr);
+      let h3 = document.createElement('h3');
+      h3.innerText = 'Votre panier contient ' + cart.products.length + ' article' + s;
+      document.querySelector("#cartId").appendChild(h3);
+      let hr = document.createElement('hr');
+      document.querySelector("#cartId").appendChild(hr);
 
-            for (let i = 0; i < cart.products.length; i++) {
-              var eltCart = document.createElement("div");                            // Création de la div eltCart
-              eltCart.classList.add('list')
-              eltCart.innerHTML = '<div class="row"><ul><li >' + cart.products[i].name + '</li><li>' + cart.products[i].price + ' €</li></ul></div>';
-              document.querySelector("#cartId").appendChild(eltCart);
-
-            }
-
-            // Calcul du total du panier
-            let sumCart = 0;
-            for (let i = 0; i < cart.products.length; i++) {
-              let unitPrice = parseInt(cart.products[i].price, 10);
-              sumCart = sumCart + unitPrice;
-            }
-
-
-            let total =document.createElement('h3');
-            total.innerText = 'Total: ' + sumCart + ' €';
-            document.querySelector('#cartId').appendChild(total);
-
-            cartId.removeChild(titleCart);
-            cartId.removeChild(hrCart);
-            cartId.removeChild(imgCart);
-            cartId.removeChild(sum);
-          }
-
-        }
+      for (let i = 0; i < cart.products.length; i++) {
+        var eltCart = document.createElement("div");                            // Création de la div eltCart
+        eltCart.classList.add('list')
+        eltCart.innerHTML = '<div class="row"><ul><li >' + cart.products[i].name + '</li><li>' + cart.products[i].price + ' €</li></ul></div>';
+        document.querySelector("#cartId").appendChild(eltCart);
 
       }
+
+      // Calcul du total du panier
+      let sumCart = 0;
+      for (let i = 0; i < cart.products.length; i++) {
+        let unitPrice = parseInt(cart.products[i].price, 10);
+        sumCart = sumCart + unitPrice;
+      }
+
+
+      let total =document.createElement('h3');
+      total.innerText = 'Total: ' + sumCart + ' €';
+      document.querySelector('#cartId').appendChild(total);
+
+      cartId.removeChild(titleCart);
+      cartId.removeChild(hrCart);
+      cartId.removeChild(imgCart);
+      cartId.removeChild(sum);
+    }
+
+  }
+
+}
 /////////////////////////////////////////////////////////////
 
 // Envoi d'infos à l'API
@@ -222,5 +224,5 @@ const sendToApi = (object) => {
 
 ////////////////////////Nombre aléatoir///////////////////////
 const integerRandom = (min, max) => {
- return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
