@@ -14,6 +14,11 @@ if (cart !== null) { // Si le panier  n'est pas vide
     eltCart.innerHTML = '<h3 class="nameOnCart" ><a href="product.html?_id=' + cart.products[i]._id + '">' + cart.products[i].name + '</a></h3>  <p class="price" >' + cart.products[i].price + ' € <i class="far fa-trash-alt" onclick="removeProductOfCart(' + '\'' + cart.products[i]._id + '\', ' + '\'' + i + '\'' + ')"></i></p>';
     document.querySelector(".myCart").appendChild(eltCart);
 
+    //let nameH3 = document.createElement("h3");
+    //nameH3.classList.add("nameOnCart");
+    //nameH3.innerText = cart.products[i].name;
+    //document.querySelector(".eltCart").appendChild(nameH3);
+
   }
   // Calcul du total du panier
   let sumCart = 0;
