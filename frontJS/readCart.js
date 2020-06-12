@@ -6,21 +6,16 @@ let cart = JSON.parse(localStorage.getItem('cart'));
 
 let myCart = document.getElementById('myCart');
 
-if (cart !== null) { // Si le panier  n'est pas vide
-  for (let i = 0; i < cart.products.length; i++) {
-    let eltCart = document.createElement("div");                            // Création de la div eltCart
-    eltCart.classList.add("eltCart");                                       // Ajout de la class="eltCart" à la div
-    eltCart.setAttribute("id", cart.products[i]._id);                 // Ajout de l'id pour la fermeture de la div au clique sur la poubelle
-    eltCart.innerHTML = '<h3 class="nameOnCart" ><a href="product.html?_id=' + cart.products[i]._id + '">' + cart.products[i].name + '</a></h3>  <p class="price" >' + cart.products[i].price + ' € <i class="far fa-trash-alt" onclick="removeProductOfCart(' + '\'' + cart.products[i]._id + '\', ' + '\'' + i + '\'' + ')"></i></p>';
-    document.querySelector(".myCart").appendChild(eltCart);
 
-    //let nameH3 = document.createElement("h3");
-    //nameH3.classList.add("nameOnCart");
-    //nameH3.innerText = cart.products[i].name;
-    //document.querySelector(".eltCart").appendChild(nameH3);
+for (let i = 0; i < cart.products.length; i++) {
+  let eltCart = document.createElement("div");                            // Création de la div eltCart
+  eltCart.classList.add("eltCart");                                       // Ajout de la class="eltCart" à la div
+  eltCart.setAttribute("id", cart.products[i]._id);                 // Ajout de l'id pour la fermeture de la div au clique sur la poubelle
+  eltCart.innerHTML = '<h3 class="nameOnCart" ><a href="product.html?_id=' + cart.products[i]._id + '">' + cart.products[i].name + '</a></h3>  <p class="price" >' + cart.products[i].price + ' € <i class="far fa-trash-alt" onclick="removeProductOfCart(' + '\'' + cart.products[i]._id + '\', ' + '\'' + i + '\'' + ')"></i></p>';
+  document.querySelector(".myCart").appendChild(eltCart);
 
-  }
-  // Calcul du total du panier
+}
+// Calcul du total du panier
   let sumCart = 0;
   for (let i = 0; i < cart.products.length; i++) {
     let unitPrice = parseInt(cart.products[i].price, 10);
@@ -54,4 +49,3 @@ if (cart !== null) { // Si le panier  n'est pas vide
     window.location.href='confirm.html';
 
   });
-}
