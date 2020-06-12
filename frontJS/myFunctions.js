@@ -103,16 +103,16 @@ const addToCart = () => {
 
 // supprimer Bouton pour tout retirer du Panier
 const noneRemoveAllBtn = () => {
-  let myCart = document.getElementById('myCart')
+  let myTotal = document.getElementById('myTotal')
   let btn = document.getElementById('removeAll');
-  myCart.removeChild(btn);
+  myTotal.removeChild(btn);
 }
 
 ///////////////////////////////////////////////////
 
 ///////////////////Supprimer un article du Panier////////////////////
 const removeProductOfCart = (idProduct) => {
-  let cart = document.getElementById('myCart');
+  let cart = document.getElementById('myList');
   console.log(cart);
   let removeProduct = document.getElementById(idProduct);
   console.log(removeProduct);
@@ -137,9 +137,10 @@ const removeProductOfCart = (idProduct) => {
         emptyCart(); // Afficher le message "panier vide"
         noneRemoveAllBtn();
         console.log(cart);
-        let totalBox = document.getElementById('totalBox')
+        let totalBox = document.getElementById('totalBox');
+        let myTotal = document.getElementById('myTotal');
         console.log(totalBox);
-        cart.removeChild(totalBox);
+        myTotal.removeChild(totalBox);
 
       }
 
