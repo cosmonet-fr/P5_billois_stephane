@@ -62,7 +62,7 @@ fetch('http://localhost:3000/api/cameras/' + id)
 
     //Bouton ajout au panier, ou supprimer du panier
 
-    addToCartBtn.setAttribute('onclick', "window.location.href='cart.html?id=" + id + "&_id=" + apiData._id + "&name=" + apiData.name + "&price=" + apiData.price + "'" )
+    addToCartBtn.setAttribute('onclick', "window.location.href='cart.html?_id=" + apiData._id + "&name=" + apiData.name + "&price=" + apiData.price + "'" )
     addToCartBtn.innerHTML = '<p><i class="fas fa-cart-plus"></i> Ajouter<em> '+ apiData.name +' au panier</em></p>';
 
     if (cart !== null) {
