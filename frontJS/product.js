@@ -29,7 +29,7 @@ fetch('http://localhost:3000/api/cameras/' + id)
     block1.removeChild(thisProduct);
 
     // Afichage 404
-    document.title = 'PAGE INÉXISTANTE || Orinoco'; // changement de la valeur en <title> 404 </title>
+    document.title = 'PAGE INEXISTANTE || Orinoco'; // changement de la valeur en <title> 404 </title>
 
     let eltCart = document.createElement("div");                           // Création de la div eltCart
     eltCart.classList.add("center");                                       // Ajout de la class="eltCart" à la div

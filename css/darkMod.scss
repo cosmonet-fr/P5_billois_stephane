@@ -6,6 +6,16 @@ $shadow: black;
 * {
   color: white;
 }
+h1 {
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+select {
+  color: black;
+}
 
 body {
   background: linear-gradient(to bottom, black, #173850, black);
