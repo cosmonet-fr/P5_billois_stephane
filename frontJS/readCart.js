@@ -11,7 +11,6 @@ for (let i = 0; i < cart.products.length; i++) {
   fetch('http://localhost:3000/api/cameras/' + cart.products[i]._id) //utilisation des data de l'API plutot que param de l'url, pour éviter faille XSS
   .then(response => response.json())
   .then(apiData => {
-    console.log('00000000000000000000000000 ' + apiData.name);
 
     ///////////////////////
     let eltCart = document.createElement("div");                            // Création de la div eltCart
@@ -31,6 +30,7 @@ for (let i = 0; i < cart.products.length; i++) {
   let unitPrice = parseInt(cart.products[i].price, 10);
   sumCart = sumCart + unitPrice;
 }
+
 let totalCart = document.createElement("div");
 totalCart.classList.add("totalCart");
 totalCart.setAttribute('id', 'totalBox');
